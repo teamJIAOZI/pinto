@@ -6,9 +6,13 @@
         {{ $user->name }}
     @else
 
-    <div class="center jumbotron">
+    <div class="alert alert-danger" role="alert">
         <div class="text-center">
-            <h1>Welcome to pinto</h1>
+        {!! link_to_route('users.menindex', '男性') !!}
+        
+        {!! link_to_route('users.womenindex', '女性') !!}
+        
+        
         </div>
     </div>
     @endif
