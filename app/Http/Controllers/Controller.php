@@ -12,7 +12,7 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
     
     public function counts($user) {
-        $count_like = $user->like()->count();
+        $count_like = $user->liking()->count();
         
         return [
             'count_like' => $count_like,

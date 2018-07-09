@@ -30,6 +30,13 @@ Route::group(['middleware' => 'auth'], function () {
     Route::group(['prefix' => 'users/{id}'], function () { 
         Route::post('like', 'UserFavoriteController@store')->name('user.follow');
         Route::delete('unlike', 'UserFavoriteController@destroy')->name('user.unfollow');
+        
+        Route::post('like', 'UserFavoriteController@store')->name('user.like');
+        Route::delete('unlike', 'UserFavoriteController@destroy')->name('user.unlike');
+        Route::get('favorites', 'UsersController@favorites')->name('users.favorites');
+        
+        Route::get('loginmenindex', 'UsersController@loginmenindex')->name('users.loginmenindex');
+        Route::get('loginwemenindex', 'UsersController@loginwomenindex')->name('users.loginwomenindex');
     });
     
 });
