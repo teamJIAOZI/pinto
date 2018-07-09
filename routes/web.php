@@ -24,3 +24,12 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 
 Route::get('menindex', 'UsersController@menindex')->name('users.menindex');
 Route::get('wemenindex', 'UsersController@womenindex')->name('users.womenindex');
+
+Route::group(['middleware' => 'auth'], function () {
+    //Route::resource('users', 'UsersController', ['only' => ['index', 'show']]);
+    Route::group(['prefix' => 'users/{id}'], function () { 
+        Route::post('like', 'UserFavoriteController@store')->name('user.follow');
+        Route::delete('unlike', 'UserFavoriteController@destroy')->name('user.unfollow');
+    });
+    
+});
