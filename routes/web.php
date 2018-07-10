@@ -12,7 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    if(Auth::check()){
+        $itemboys = \DB::table('favorites')->join('items', 'favorites.favorite_id', '=', 'items.id')->select('items.*', \DB::raw('COUNT(*) as count'))->where('gender', 1)->groupBy('items.id', 'items.gender', 'items.items', 'items.story','items.created_at', 'items.updated_at','items.price')->orderBy('count', 'DESC')->take(10)->get();
+        $itemgirls = \DB::table('favorites')->join('items', 'favorites.favorite_id', '=', 'items.id')->select('items.*', \DB::raw('COUNT(*) as count'))->where('gender', 2)->groupBy('items.id', 'items.gender', 'items.items', 'items.story','items.created_at', 'items.updated_at','items.price')->orderBy('count', 'DESC')->take(10)->get();
+    return view('welcome', ['items'=> $itemboys,'itemgirls'=>$itemgirls]);
+    } else {
+        return view('welcome');
+    }
 });
 
 Route::get('signup', 'Auth\RegisterController@showRegistrationForm')->name('signup.get');

@@ -1,7 +1,7 @@
 @if (count($favorites) > 0)
 
 <ul class="media-list">
-@foreach ($favorites as $items)
+
     <li class="media">
 
         <div class="media-body">
@@ -15,7 +15,7 @@
                 </tr>
             </thead>
             <tbody>
-                
+                @foreach ($favorites as $items)
             <tr>
                 <td>{!! nl2br(e($items->items)) !!}</td>
                 <td>￥{!! nl2br(e($items->price)) !!}</td>
@@ -30,7 +30,7 @@
                         {!! Form::close() !!}
                     @endif</td>
             </tr>
-               
+            @endforeach   
             </tbody>
             </table>
             
@@ -38,8 +38,7 @@
 
         </div>
     </li>
-<! - Omission ->
-@endforeach
+
 </ul>
 {!! $favorites->render() !!}
 @endif
