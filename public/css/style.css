@@ -112,7 +112,7 @@ p.item-title {
   }
 /* ↓id="nav"の中のulの中のliに対してCSSを適用*/
 #nav ul li { 
-  display: inline-block;/*inline-blockにします*/
+  /*display: inline-block;/*inline-blockにします*/
   width: 300px;/*幅も指定できる*/
   height: 250px;/*高さも指定できる*/
   padding: 10px 0;/*余白も指定できる*/
@@ -121,6 +121,7 @@ p.item-title {
   background: #FFE4B5;/*背景を水色に*/
   font-weight: bold;/*文字を太字に*/
   color:white /*文字色を白に*/
+  float: left;
   }
   
 img{
