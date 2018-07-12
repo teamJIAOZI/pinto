@@ -81,4 +81,24 @@ class UsersController extends Controller
 
         return view('users.favorites', $data);
     }
+    
+    public function mensearch(Request $request)
+    {
+    $value = $request->answers;   
+    
+         $item = \DB::table('items')->where('gender', '1')->where('kind', $value)->take(10)->get();
+         
+        return view('users.menindex', [
+            'items' => $item, ]);
+    }
+    
+    public function womensearch(Request $request)
+    {
+    $value = $request->answers;   
+    
+         $item = \DB::table('items')->where('gender', '2')->where('kind', $value)->take(10)->get();
+         
+        return view('users.womenindex', [
+            'items' => $item, ]);
+    }
 }
