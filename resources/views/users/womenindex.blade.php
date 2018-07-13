@@ -1,19 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
+<?php $user = Auth::user(); ?>
     <p id="survey-ttl">親密度で絞り込む<br>
             
      {!! Form::open(['route' => 'users.womensearch','method' => 'get']) !!}
      
     <ol id="survey-list">
             <li><label>
-            <input type="radio" name="answers"  value=1>
+            <input type="radio" name="answers"  value=5>
             <span class="survey-radio-btn"></span>
             <strong>家族</strong>
             </label>
             </li><li>
             <label>
-            <input type="radio" name="answers"  value=2>
+            <input type="radio" name="answers"  value=4>
             <span class="survey-radio-btn"></span>
             <strong>恋人</strong>
             </label>
@@ -25,13 +26,13 @@
             </label>
             </li><li>
             <label>
-            <input type="radio" name="answers" value=4>
+            <input type="radio" name="answers" value=2>
             <span class="survey-radio-btn"></span>
             <strong>友</strong>
             </label>
             </li><li>
             <label>
-            <input type="radio" name="answers"  value=5>
+            <input type="radio" name="answers"  value=1>
             <span class="survey-radio-btn"></span>
             <strong>よっ友</strong>
             </label></li>
@@ -48,12 +49,11 @@
     
     
      
-        
+<div class="row">   
         @foreach ($items as $key => $item)
-        
-            <div class="row">
+        <div class="item">
                 <div class="col-md-3 col-sm-4 col-xs-12">
-                       <div id = "nav" class="item">
+                       <div id = "nav">
                            <ul>
                                <li>
                                   <div class="sample1">
@@ -63,7 +63,6 @@
                                        </div>
                                   </div>
                                   {{ $item->name }}</br>￥{{ $item->price }}
-                                  {{ $item->story }}
                                   
                                   
                             @if (Auth::check())
@@ -73,9 +72,10 @@
                                </li>
                            </ul>
                        </div>
-               </div>
+        </div>
+               
         @endforeach
-          
+</div>          
 
 @endsection
 

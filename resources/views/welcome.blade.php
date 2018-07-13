@@ -5,6 +5,7 @@
         <div class="cover-inner">
             <div class="cover-contents">
                 <h1>あなたの気持ち、誰に届ける。</h1>
+                
 @endsection
 
 @section('content')
@@ -23,66 +24,73 @@
         </button><br>
         
         男性人気ランキング
+        
+        <div class="row">
         @foreach ($items as $key => $item)
-                
-            @if (isset($item->count))
-                <div class="row">
-                       <div id = "nav" class="item">
+        <div class = "item">
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                       <div id = "nav">
                            <ul>
                                <li>
                                   <div class="sample1">
-                                       <img src="{{ secure_asset("images/coffee.jpg") }}" alt="story">
+                                       <img src="{{ $item->image_url }}" alt="story">
                                        <div class="mask">
                                           <div class="caption">{{ $item->story }}</div>
                                        </div>
                                   </div>
                                   {{ $key+1 }}位: {{ $item->count}} Favorite </br>
-                                  {{ $item->items }}￥{{ $item->price }}</br>
+                                  {{ $item->name }}</br>￥{{ $item->price }}
                                   
-                            @if (Auth::check())
-                                  @include('user_favorite.favorite_button', ['user' => $user])
-                            @endif
+                                  
+                            <!--@if (Auth::check())-->
+                            <!--      @include('user_favorite.favorite_button', ['user' => $user])-->
+                            <!--@endif-->
                             
                                </li>
                            </ul>
                        </div>
-               </div>
-            @endif
+                 </div>
+                 </div>
+              
         @endforeach
+</div>
+        
+        
+        
         
         女性人気ランキング
+        <div class="row">
         @foreach ($itemgirls as $key => $itemgirl)
-                
-            @if (isset($itemgirl->count))
-                <div class="row">
-                       <div id = "nav" class="item">
+        <div class = "item">
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                       <div id = "nav">
                            <ul>
                                <li>
                                   <div class="sample1">
-                                       <img src="{{ secure_asset("images/coffee.jpg") }}" alt="story">
+                                       <img src="{{ $itemgirl->image_url }}" alt="story">
                                        <div class="mask">
                                           <div class="caption">{{ $itemgirl->story }}</div>
                                        </div>
                                   </div>
                                   {{ $key+1 }}位: {{ $itemgirl->count}} Favorite </br>
-                                  {{ $itemgirl->items }}￥{{ $itemgirl->price }}</br>
+                                  {{ $itemgirl->name }}</br>￥{{ $itemgirl->price }}
                                   
-                            @if (Auth::check())
-                                  @include('user_favorite.favorite_button', ['user' => $user])
-                            @endif
+                                  
+                            <!--@if (Auth::check())-->
+                            <!--      @include('user_favorite.favorite_button', ['user' => $user])-->
+                            <!--@endif-->
                             
                                </li>
                            </ul>
                        </div>
-               </div>
-            @endif
+                 </div>
+                 </div>
+              
         @endforeach
+</div>
         
         
         
-
-
-    </div>
     @else
 
         <button type="button" class="btn btn-default">

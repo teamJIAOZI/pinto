@@ -108,15 +108,15 @@ p.item-title {
 /* content */
 #nav ul {
   list-style-type: none; /*箇条書きのポッチを消す*/
-  text-align:center /*左右中央寄せは親要素に対して指定*/
+  text-align:center; /*左右中央寄せは親要素に対して指定*/
   }
 /* ↓id="nav"の中のulの中のliに対してCSSを適用*/
 #nav ul li { 
   display: inline-block;/*inline-blockにします*/
   width: 350px;/*幅も指定できる*/
-  height: 350px;/*高さも指定できる*/
+  height: 380px;/*高さも指定できる*/
   padding: 10px 0;/*余白も指定できる*/
-  margin: 10px 0;/*余白も指定できる*/
+  margin: 50px 0;/*余白も指定できる*/
   vertical-align: middle;/*縦の表示位置も指定できる*/
   background: #FFE4B5;/*背景を水色に*/
   font-weight: bold;/*文字を太字に*/
@@ -154,13 +154,3 @@ img{
 .sample1:hover .mask {
         opacity: 1;        /* マスクを表示する */
 }
-
-.button {
-      height: 25px;
-      width: 40px;
-      font-weight: lighter;
-      text-align: center;
-      border:1px solid #38aef0;
-      color: #38aef0;
-      padding: 5px 20px;
-  }

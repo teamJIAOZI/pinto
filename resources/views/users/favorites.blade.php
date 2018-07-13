@@ -14,4 +14,6 @@
             @include('users.items', ['favorites' => $favorites , 'users' => $user,])
         </div>
     </div>
+    
+    
 @endsection
