@@ -36,8 +36,10 @@
             <strong>よっ友</strong>
             </label></li>
         </ol>
+        
+    <input class="button" type="submit" value="絞り込み">
                             
-    {!! Form::submit('絞り込む', ['class' => 'btn btn-danger btn-xs']) !!}    
+    <!--{!! Form::submit('絞り込む', ['class' => 'btn btn-danger btn-xs']) !!}    -->
                         
     {!! Form::close() !!}
     {!! Form::open(['route' => 'users.menindex','method' => 'get']) !!}
@@ -49,19 +51,20 @@
     
      
         
-        @foreach ($items as $item)
+        @foreach ($items as $key => $item)
+        
             <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-12">
                        <div id = "nav" class="item">
                            <ul>
                                <li>
                                   <div class="sample1">
-                                       <img src="{{ secure_asset("images/coffee.jpg") }}" alt="story">
+                                       <img src="{{ $item->image_url }}" alt="story">
                                        <div class="mask">
                                           <div class="caption">{{ $item->story }}</div>
                                        </div>
                                   </div>
-                                  {{ $item->items }}￥{{ $item->price }}</br>
-                                  {{ $item->story }}
+                                  {{ $item->name }}</br>￥{{ $item->price }}
                                   
                                   
                             @if (Auth::check())
@@ -71,6 +74,7 @@
                                </li>
                            </ul>
                        </div>
+                 </div>
                </div>
         @endforeach
           
