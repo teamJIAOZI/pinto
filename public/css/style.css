@@ -40,6 +40,15 @@ footer {
     font-weight: lighter;
     letter-spacing: 0.15em;
 }
+
+.cover .cover-inner .cover-contents h2 {
+    margin: 0 0 20px 0;
+    color: #FFB6C1;
+    font-weight: lighter;
+    font-family: "Mplus 1p",'Helvetica Neue','Helvetica','Arial', "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    letter-spacing: 0.15em;
+}
+
 .cover .btn-success {
     background-color: #ed486f;
     border-color: #ed486f;

@@ -1,13 +1,12 @@
-@if (count($favorites) > 0)
 <div class="row">
-        @foreach ($favorites as $key => $item)
+        @foreach ($items as $key => $item)
         <div class = "item">
                 <div class="col-md-3 col-sm-4 col-xs-12">
                        <div id = "nav">
                            <ul>
                                <li>
                                   <div class="sample1">
-                                       <!--<img src="{{ $item->image_url }}" alt="story">-->
+                                       
                                        <div class="mask">
                                           <div class="caption">{{ $item->story }}</div>
                                        </div>
@@ -26,8 +25,5 @@
                  </div>
               
         @endforeach
-    
 </div>
-{!! $favorites->render() !!}
-
-@endif
+{!! $items->render() !!}

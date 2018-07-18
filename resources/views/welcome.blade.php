@@ -4,7 +4,8 @@
     <div class="cover">
         <div class="cover-inner">
             <div class="cover-contents">
-                <h1>あなたの気持ち、誰に届ける。</h1>
+                <h1>Pinto</h1>
+                    <h2>ピントくる、とっておきのプレゼント</h2>
                 
 @endsection
 
@@ -15,15 +16,12 @@
         
         誰にあげますか</br>
         
-        <button type="button" class="btn btn-default">
-            <span class="glyphicon glyphicon-heart"></span>
-            
-            {!! link_to_route('users.loginwomenindex', '女性',['id' => $user->id]) !!}
-        </button>
-        <button type="button" class="btn btn-default">
-                <span class="glyphicon glyphicon-star"></span>
-            {!! link_to_route('users.loginmenindex', '男性',['id' => $user->id]) !!}
-        </button><br>
+        <a href="{{ route('users.loginwomenindex',['id' => $user->id] ) }}" class="cp_btnwomen">女性にあげる</a>
+        
+        <a href="{{ route('users.loginmenindex',['id' => $user->id] ) }}" class="cp_btnmen">男性にあげる</a>
+
+        
+        </br>
         
         男性人気ランキング
         
@@ -43,10 +41,7 @@
                                   {{ $key+1 }}位: {{ $item->count}} Favorite </br>
                                   {{ $item->items }}</br>相場:￥{{ $item->price }}
                                   @include('user_favorite.favorite_button', ['user' => $user])
-                                  
-                                  
-                            
-                            
+
                                </li>
                            </ul>
                        </div>
@@ -95,18 +90,10 @@
 
         </br>誰にあげますか</br>
         
-        <button type="button" class="btn btn-default">
-            <span class="glyphicon glyphicon-heart"></span>
-            {!! link_to_route('users.womenindex', '女性') !!}
-        </button>
-        <button type="button" class="btn btn-default">
-            <span class="glyphicon glyphicon-star"></span>
-            {!! link_to_route('users.menindex', '男性') !!}
-        </button>
-
+        <a href="{{ route('users.womenindex') }}" class="cp_btnwomen">女性にあげる</a>
         
-        </button>
-    </div>
-    </div>
+        <a href="{{ route('users.menindex') }}" class="cp_btnmen">男性にあげる</
+        
+
     @endif
 @endsection

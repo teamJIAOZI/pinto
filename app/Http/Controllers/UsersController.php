@@ -8,10 +8,22 @@ use App\User;
 use Illuminate\Pagination\LengthAwarePaginator;
 
 class UsersController extends Controller
-{
-     public function menindex()
+{   
+    // ログイン前の男性向けプレゼント一覧ページへのfunc
+     public function menindex(Request $request)
     {
-        $items = \DB::table('items')->select('id', 'items','story','price', 'item_brand')->where('gender', '1')->orderBy(\DB::raw('RAND()'))->paginate(5);
+        
+        $number = rand();
+        
+        if(empty($request->all())) {
+            
+            session(['menindexkey' => $number]);
+        } else {
+            $number = session('menindexkey');
+        }
+        
+        
+        $items = \DB::table('items')->select('id', 'items','story','price', 'item_brand')->where('gender', '1')->orderBy(\DB::raw('RAND('.$number.')'))->paginate(5);
         // $items = [];
      
         
@@ -54,10 +66,20 @@ class UsersController extends Controller
     }
     
     
-    
-     public function womenindex()
+    // ログイン前の女性向けプレゼント一覧ページへのfunc
+     public function womenindex(Request $request)
     {
-        $items = \DB::table('items')->select('id','items','story','price', 'item_brand')->where('gender', '2')->orderBy(\DB::raw('RAND()'))->paginate(5);
+        $number = rand();
+        
+        if(empty($request->all())) {
+            
+            session(['womenindexkey' => $number]);
+        } else {
+            $number = session('womenindexkey');
+        }
+        
+        
+        $items = \DB::table('items')->select('id','items','story','price', 'item_brand')->where('gender', '2')->orderBy(\DB::raw('RAND('.$number.')'))->paginate(5);
         // $items = [];
         
         // foreach($keywords as $keyword){
@@ -94,9 +116,19 @@ class UsersController extends Controller
         
     }
     
-     public function loginmenindex($id)
+    // ログイン後の男性向けプレゼント一覧ページへのfunc
+     public function loginmenindex(Request $request, $id)
     {
-         $items = \DB::table('items')->select('id','items','story','price', 'item_brand')->where('gender', '1')->orderBy(\DB::raw('RAND()'))->paginate(5);
+        $number = rand();
+        
+        if(empty($request->all())) {
+            
+            session(['loginmenindexkey' => $number]);
+        } else {
+            $number = session('loginmenindexkey');
+        }
+        
+         $items = \DB::table('items')->select('id','items','story','price', 'item_brand')->where('gender', '1')->orderBy(\DB::raw('RAND('.$number.')'))->paginate(5);
         //  $items = [];
          $user = User::find($id);
         
@@ -134,9 +166,19 @@ class UsersController extends Controller
         ]);
     }
     
-     public function loginwomenindex($id)
+    // ログイン後の女性向けプレゼント一覧ページへのfunc
+     public function loginwomenindex(Request $request, $id)
     {
-         $items = \DB::table('items')->select('id','items','story','price', 'item_brand')->where('gender', '2')->orderBy(\DB::raw('RAND()'))->paginate(5);
+        $number = rand();
+        
+        if(empty($request->all())) {
+            
+            session(['loginwomenindexkey' => $number]);
+        } else {
+            $number = session('loginwomenindexkey');
+        }
+        
+         $items = \DB::table('items')->select('id','items','story','price', 'item_brand')->where('gender', '2')->orderBy(\DB::raw('RAND('.$number.')'))->paginate(5);
         //  $items = [];
          $user = User::find($id);
          
@@ -292,9 +334,18 @@ class UsersController extends Controller
     // 男性ページでの親密度検索
     public function mensearch(Request $request)
     {
+        $number = rand();
+        
+        if(empty($request->all())) {
+            
+            session(['mensearchkey' => $number]);
+        } else {
+            $number = session('mensearchkey');
+        }
+        
         $value = $request->answers;   
     
-        $items = \DB::table('items')->select('id','items','story','price', 'item_brand')->where('gender', '1')->where('kind', $value)->orderBy(\DB::raw('RAND()'))->paginate(5);
+        $items = \DB::table('items')->select('id','items','story','price', 'item_brand')->where('gender', '1')->where('kind', $value)->orderBy(\DB::raw('RAND('.$number.')'))->paginate(5);
         // $items = [];
         
         // foreach($keywords as $keyword){
@@ -334,9 +385,18 @@ class UsersController extends Controller
     // 女性ページでの親密度検索
     public function womensearch(Request $request)
     {
+        $number = rand();
+        
+        if(empty($request->all())) {
+            
+            session(['womensearchkey' => $number]);
+        } else {
+            $number = session('womensearchkey');
+        }
+        
         $value = $request->answers;   
     
-        $items = \DB::table('items')->select('id','items','story','price', 'item_brand')->where('gender', '2')->where('kind', $value)->orderBy(\DB::raw('RAND()'))->paginate(5);
+        $items = \DB::table('items')->select('id','items','story','price', 'item_brand')->where('gender', '2')->where('kind', $value)->orderBy(\DB::raw('RAND('.$number.')'))->paginate(5);
         // $items = [];
         
         // foreach($keywords as $keyword){
