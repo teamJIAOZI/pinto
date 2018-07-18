@@ -14,7 +14,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     @if (Auth::check())
-                        <li>{!! link_to_route('users.favorites', 'お気に入り一覧',['id' => Auth::id()]) !!}</li>
+                        <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">お気に入り一覧 <span class="caret"></span></a>-->
+                        <!--    <ul class="dropdown-menu">-->
+                        <li>{!! link_to_route('users.menfavorites', 'お気に入り一覧（男性）',['id' => Auth::id()]) !!}</li>
+                        <li>{!! link_to_route('users.womenfavorites', 'お気に入り一覧（女性）',['id' => Auth::id()]) !!}</li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
                             <ul class="dropdown-menu">

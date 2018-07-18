@@ -154,3 +154,40 @@ img{
 .sample1:hover .mask {
         opacity: 1;        /* マスクを表示する */
 }
+
+a.cp_btnwomen {
+display: inline-block;
+width: 160px;
+padding: 0.8em;
+margin: 20px;
+text-align: center;
+text-decoration: none;
+color: #ffb6c1;
+border: 2px solid #ffb6c1;
+border-radius: 3px;
+transition: .4s;
+}
+a.cp_btnwomen:hover {
+background: #ffb6c1;
+color: #fff;
+}
+
+a.cp_btnmen {
+display: inline-block;
+width: 160px;
+padding: 0.8em;
+margin: 20px;
+text-align: center;
+text-decoration: none;
+color: #87CEEB;
+border: 2px solid #87CEEB;
+border-radius: 3px;
+transition: .4s;
+}
+a.cp_btnmen:hover {
+background: #87CEEB;
+color: #fff;
+}
+p{
+    font-family: 'Caveat', cursive;
+}

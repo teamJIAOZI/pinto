@@ -40,8 +40,7 @@
         
     <input class="button" type="submit" value="絞り込み">
                             
-    <!--{!! Form::submit('絞り込む', ['class' => 'btn btn-danger btn-xs']) !!}    -->
-                        
+    
     {!! Form::close() !!}
     {!! Form::open(['route' => 'users.menindex','method' => 'get']) !!}
     {!! Form::submit('絞り込み解除', ['class' => 'btn btn-danger btn-xs']) !!}
@@ -59,12 +58,12 @@
                            <ul>
                                <li>
                                   <div class="sample1">
-                                       <img src="{{ $item->image_url }}" alt="story">
+                                       
                                        <div class="mask">
                                           <div class="caption">{{ $item->story }}</div>
                                        </div>
                                   </div>
-                                  {{ $item->name }}</br>￥{{ $item->price }}
+                                  {{ $item->items }}</br>相場:￥{{ $item->price }}
                                   
                                   
                             @if (Auth::check())
@@ -79,6 +78,7 @@
               
         @endforeach
 </div>
+{!! $items->render() !!}
 
 @endsection
 

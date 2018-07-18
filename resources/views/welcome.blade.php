@@ -11,7 +11,9 @@
 @section('content')
      @if (Auth::check())
         <?php $user = Auth::user(); ?>
-        {{ $user->name }}さん</br>
+        {{ $user->name }}さん</br></br>
+        
+        誰にあげますか</br>
         
         <button type="button" class="btn btn-default">
             <span class="glyphicon glyphicon-heart"></span>
@@ -33,18 +35,17 @@
                            <ul>
                                <li>
                                   <div class="sample1">
-                                       <img src="{{ $item->image_url }}" alt="story">
+                                       
                                        <div class="mask">
                                           <div class="caption">{{ $item->story }}</div>
                                        </div>
                                   </div>
                                   {{ $key+1 }}位: {{ $item->count}} Favorite </br>
-                                  {{ $item->name }}</br>￥{{ $item->price }}
+                                  {{ $item->items }}</br>相場:￥{{ $item->price }}
+                                  @include('user_favorite.favorite_button', ['user' => $user])
                                   
                                   
-                            <!--@if (Auth::check())-->
-                            <!--      @include('user_favorite.favorite_button', ['user' => $user])-->
-                            <!--@endif-->
+                            
                             
                                </li>
                            </ul>
@@ -67,18 +68,17 @@
                            <ul>
                                <li>
                                   <div class="sample1">
-                                       <img src="{{ $itemgirl->image_url }}" alt="story">
+                                      
                                        <div class="mask">
                                           <div class="caption">{{ $itemgirl->story }}</div>
                                        </div>
                                   </div>
                                   {{ $key+1 }}位: {{ $itemgirl->count}} Favorite </br>
-                                  {{ $itemgirl->name }}</br>￥{{ $itemgirl->price }}
+                                  {{ $itemgirl->items }}</br>相場:￥{{ $itemgirl->price }}
                                   
+                                  @include('user_favorite.favorite_button', ['user' => $user])
                                   
-                            <!--@if (Auth::check())-->
-                            <!--      @include('user_favorite.favorite_button', ['user' => $user])-->
-                            <!--@endif-->
+                            
                             
                                </li>
                            </ul>
@@ -93,6 +93,8 @@
         
     @else
 
+        </br>誰にあげますか</br>
+        
         <button type="button" class="btn btn-default">
             <span class="glyphicon glyphicon-heart"></span>
             {!! link_to_route('users.womenindex', '女性') !!}

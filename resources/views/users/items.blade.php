@@ -10,12 +10,12 @@
                            <ul>
                                <li>
                                   <div class="sample1">
-                                       <img src="{{ $item->image_url }}" alt="story">
+                                       <!--<img src="{{ $item->image_url }}" alt="story">-->
                                        <div class="mask">
                                           <div class="caption">{{ $item->story }}</div>
                                        </div>
                                   </div>
-                                  {{ $item->name }}</br>￥{{ $item->price }}
+                                  {{ $item->items }}</br>相場:￥{{ $item->price }}
                                   
                                   
                             @if (Auth::check())
@@ -29,7 +29,8 @@
                  </div>
               
         @endforeach
+    
 </div>
-
+{!! $favorites->render() !!}
 
 @endif
