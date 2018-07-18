@@ -9,10 +9,11 @@
                                   <div class="sample1">
                                        <!--<img src="{{ $item->image_url }}" alt="story">-->
                                        <div class="mask">
-                                          <div class="caption">{{ $item->story }}</div>
+                                          <!--<div class="caption">{{ $item->story }}</div>-->
                                        </div>
                                   </div>
-                                  {{ $item->items }}</br>相場:￥{{ $item->price }}
+                                  <!--{{ $item->items }}</br>相場:￥{{ $item->price }}-->
+                                  <a href="{{ route('users.searchindex', ['keyword' => $item->item_brand] ) }}" class="cp_btnwomen">{{ $item->items }}</br>相場:￥{{ $item->price }}</a>
                                   
                                   
                             @if (Auth::check())

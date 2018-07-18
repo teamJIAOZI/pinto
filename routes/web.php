@@ -113,6 +113,11 @@ Route::get('wemenindex', 'UsersController@womenindex')->name('users.womenindex')
 Route::get('mensearch', 'UsersController@mensearch')->name('users.mensearch');
 Route::get('womensearch', 'UsersController@womensearch')->name('users.womensearch');
 
+Route::get('searchindex', 'UsersController@searchindex')->name('users.searchindex');
+
+
+
+
 Route::group(['middleware' => 'auth'], function () {
     
     Route::group(['prefix' => 'users/{id}'], function () { 
