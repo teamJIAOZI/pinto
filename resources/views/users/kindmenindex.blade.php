@@ -5,7 +5,6 @@
     <p id="survey-ttl">親密度で絞り込む</p><br>
     
      {!! Form::open(['route' => 'users.mensearch','method' => 'get']) !!}
-
     
     <div class="radiobutton">
             <li><label>
@@ -45,7 +44,7 @@
     {!! Form::close() !!}
     
     <!--アイテム一覧ページをinclude-->
-    @include('users.index', ['user' => $user,'items' => $items])
+    @include('users.kindmen', ['user' => $user,'items' => $items])
 
 @endsection
 

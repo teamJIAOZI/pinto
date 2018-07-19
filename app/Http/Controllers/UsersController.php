@@ -23,42 +23,8 @@ class UsersController extends Controller
         }
         
         
-        $items = \DB::table('items')->select('id', 'items','story','price', 'item_brand')->where('gender', '1')->orderBy(\DB::raw('RAND('.$number.')'))->paginate(5);
-        // $items = [];
-     
+        $items = \DB::table('items')->select('id', 'items','story','price', 'item_brand','img_path')->where('gender', '1')->orderBy(\DB::raw('RAND('.$number.')'))->paginate(5);
         
-        // foreach($keywords as $keyword){
-        //     $itemname = $keyword->items;
-        //     $itembrand = $keyword->item_brand;
-        //     $gift = $itembrand." ".$itemname;
-            
-            
-        // if ($gift) {
-        //     $client = new \RakutenRws_Client();
-        //     $client->setApplicationId(env('RAKUTEN_APPLICATION_ID'));
-        //     $rws_response = $client->execute('IchibaItemSearch', [
-        //         'keyword' => $gift,
-        //         'imageFlag' => 1,
-        //         'hits' => 1,
-        //     ]);
-        // }
-    
-        //     // Creating "Item" instance to make it easy to handle.（not saving）
-        //     foreach ($rws_response->getData()['Items'] as $rws_item) {
-        //         $item = new Item();
-        //         $item->code = $rws_item['Item']['itemCode'];
-        //         $item->id = $keyword->id;
-        //         $item->name = $keyword->items;
-        //         $item->story = $keyword->story;
-        //         $item->brand = $keyword->item_brand;
-        //         $item->price = $keyword->price;
-        //         $item->url = $rws_item['Item']['itemUrl'];
-        //         $item->image_url = str_replace('?_ex=128x128', '', $rws_item['Item']['mediumImageUrls'][0]['imageUrl']);
-        //         $items[] = $item;
-        //     }
-    
-        
-        // }
 
         return view('users.menindex', [
             'items' => $items,
@@ -79,37 +45,8 @@ class UsersController extends Controller
         }
         
         
-        $items = \DB::table('items')->select('id','items','story','price', 'item_brand')->where('gender', '2')->orderBy(\DB::raw('RAND('.$number.')'))->paginate(5);
-        // $items = [];
-        
-        // foreach($keywords as $keyword){
-        //     $gift = $keyword->item_brand;
-            
-        // if ($gift) {
-        //     $client = new \RakutenRws_Client();
-        //     $client->setApplicationId(env('RAKUTEN_APPLICATION_ID'));
-        //     $rws_response = $client->execute('IchibaItemSearch', [
-        //         'keyword' => $gift,
-        //         'imageFlag' => 1,
-        //         'hits' => 1,
-        //     ]);
-        // }
-    
-        //     // Creating "Item" instance to make it easy to handle.（not saving）
-        //     foreach ($rws_response->getData()['Items'] as $rws_item) {
-        //         $item = new Item();
-        //         $item->code = $rws_item['Item']['itemCode'];
-        //         $item->id = $keyword->id;
-        //         $item->name = $keyword->items;
-        //         $item->story = $keyword->story;
-        //         $item->price = $keyword->price;
-        //         $item->brand = $keyword->item_brand;
-        //         $item->url = $rws_item['Item']['itemUrl'];
-        //         $item->image_url = str_replace('?_ex=128x128', '', $rws_item['Item']['mediumImageUrls'][0]['imageUrl']);
-        //         $items[] = $item;
-        //     }
-        // }
-
+        $items = \DB::table('items')->select('id','items','story','price', 'item_brand','img_path')->where('gender', '2')->orderBy(\DB::raw('RAND('.$number.')'))->paginate(5);
+       
         return view('users.womenindex', [
             'items' => $items,
         ]);
@@ -120,7 +57,7 @@ class UsersController extends Controller
      public function loginmenindex(Request $request, $id)
     {
         $number = rand();
-        
+
         if(empty($request->all())) {
             
             session(['loginmenindexkey' => $number]);
@@ -128,38 +65,11 @@ class UsersController extends Controller
             $number = session('loginmenindexkey');
         }
         
-         $items = \DB::table('items')->select('id','items','story','price', 'item_brand')->where('gender', '1')->orderBy(\DB::raw('RAND('.$number.')'))->paginate(5);
-        //  $items = [];
+         $items = \DB::table('items')->select('id','items','story','price', 'item_brand','img_path')->where('gender', '1')->orderBy(\DB::raw('RAND('.$number.')'))->paginate(5);
+        
          $user = User::find($id);
         
-        // foreach($keywords as $keyword){
-        //     $gift = $keyword->item_brand;
-            
-        // if ($gift) {
-        //     $client = new \RakutenRws_Client();
-        //     $client->setApplicationId(env('RAKUTEN_APPLICATION_ID'));
-        //     $rws_response = $client->execute('IchibaItemSearch', [
-        //         'keyword' => $gift,
-        //         'imageFlag' => 1,
-        //         'hits' => 1,
-        //     ]);
-        // }
-    
-        //     // Creating "Item" instance to make it easy to handle.（not saving）
-        //     foreach ($rws_response->getData()['Items'] as $rws_item) {
-        //         $item = new Item();
-        //         $item->code = $rws_item['Item']['itemCode'];
-        //         $item->id = $keyword->id;
-        //         $item->name = $keyword->items;
-        //         $item->story = $keyword->story;
-        //         $item->price = $keyword->price;
-        //         $item->brand = $keyword->item_brand;
-        //         $item->url = $rws_item['Item']['itemUrl'];
-        //         $item->image_url = str_replace('?_ex=128x128', '', $rws_item['Item']['mediumImageUrls'][0]['imageUrl']);
-        //         $items[] = $item;
-        //     }
-        // }
-
+        
         return view('users.menindex', [
             'items' => $items,
             'user' => $user,
@@ -178,37 +88,11 @@ class UsersController extends Controller
             $number = session('loginwomenindexkey');
         }
         
-         $items = \DB::table('items')->select('id','items','story','price', 'item_brand')->where('gender', '2')->orderBy(\DB::raw('RAND('.$number.')'))->paginate(5);
-        //  $items = [];
+         $items = \DB::table('items')->select('id','items','story','price', 'item_brand','img_path')->where('gender', '2')->orderBy(\DB::raw('RAND('.$number.')'))->paginate(5);
+        
          $user = User::find($id);
          
-        // foreach($keywords as $keyword){
-        //     $gift = $keyword->item_brand;
-            
-        // if ($gift) {
-        //     $client = new \RakutenRws_Client();
-        //     $client->setApplicationId(env('RAKUTEN_APPLICATION_ID'));
-        //     $rws_response = $client->execute('IchibaItemSearch', [
-        //         'keyword' => $gift,
-        //         'imageFlag' => 1,
-        //         'hits' => 1,
-        //     ]);
-        // }
-    
-        //     // Creating "Item" instance to make it easy to handle.（not saving）
-        // foreach ($rws_response->getData()['Items'] as $rws_item) {
-        //         $item = new Item();
-        //         $item->code = $rws_item['Item']['itemCode'];
-        //         $item->id = $keyword->id;
-        //         $item->name = $keyword->items;
-        //         $item->story = $keyword->story;
-        //         $item->price = $keyword->price;
-        //         $item->brand = $keyword->item_brand;
-        //         $item->url = $rws_item['Item']['itemUrl'];
-        //         $item->image_url = str_replace('?_ex=128x128', '', $rws_item['Item']['mediumImageUrls'][0]['imageUrl']);
-        //         $items[] = $item;
-        //     }
-        // }
+        
          
 
         return view('users.womenindex', [
@@ -223,56 +107,7 @@ class UsersController extends Controller
         
         $user = User::find($id);
         $favorites = $user->liking()->where('gender', '1')->paginate(5);
-        // $favorites = [];
         
-        // foreach($keywords as $keyword){
-        //     $gift = $keyword->item_brand;
-            
-        // if ($gift) {
-        //     $client = new \RakutenRws_Client();
-        //     $client->setApplicationId(env('RAKUTEN_APPLICATION_ID'));
-        //     $rws_response = $client->execute('IchibaItemSearch', [
-        //         'keyword' => $gift,
-        //         'imageFlag' => 1,
-        //         'hits' => 1,
-        //     ]);
-        // }
-    
-        //     // Creating "Item" instance to make it easy to handle.（not saving）
-        // foreach ($rws_response->getData()['Items'] as $rws_item) {
-        //         $item = new Item();
-        //         $item->code = $rws_item['Item']['itemCode'];
-        //         $item->id = $keyword->id;
-        //         $item->name = $keyword->items;
-        //         $item->story = $keyword->story;
-        //         $item->price = $keyword->price;
-        //         $item->brand = $keyword->item_brand;
-        //         $item->url = $rws_item['Item']['itemUrl'];
-        //         $item->image_url = str_replace('?_ex=128x128', '', $rws_item['Item']['mediumImageUrls'][0]['imageUrl']);
-        //         $favorites[] = $item;
-        //     }
-        // }
-        
-       
-
-        // // Get current page form url e.x. &page=1
-        // $currentPage = LengthAwarePaginator::resolveCurrentPage();
-
-        // // Create a new Laravel collection from the array data
-        // $itemCollection = collect($favorites);
- 
-        // // Define how many items we want to be visible in each page
-        // $perPage = 4;
- 
-        // // Slice the collection to get the items to display in current page
-        // $currentPageItems = $itemCollection->slice(($currentPage * $perPage) - $perPage, $perPage)->all();
- 
-        // // Create our paginator and pass it to the view
-        // $paginatedItems= new LengthAwarePaginator($currentPageItems , count($itemCollection), $perPage);
- 
-        // // set url path for generted links
-        // $paginatedItems->setPath($request->url());
- 
         $data = [
             'user' => $user,
             'favorites' => $favorites,  
@@ -290,36 +125,7 @@ class UsersController extends Controller
         
         $user = User::find($id);
         $favorites = $user->liking()->where('gender', '2')->paginate(5);
-        // $favorites = [];
-        
-        // foreach($keywords as $keyword){
-        //     $gift = $keyword->item_brand;
-            
-        // if ($gift) {
-        //     $client = new \RakutenRws_Client();
-        //     $client->setApplicationId(env('RAKUTEN_APPLICATION_ID'));
-        //     $rws_response = $client->execute('IchibaItemSearch', [
-        //         'keyword' => $gift,
-        //         'imageFlag' => 1,
-        //         'hits' => 1,
-        //     ]);
-        // }
-    
-        //     // Creating "Item" instance to make it easy to handle.（not saving）
-        // foreach ($rws_response->getData()['Items'] as $rws_item) {
-        //         $item = new Item();
-        //         $item->code = $rws_item['Item']['itemCode'];
-        //         $item->id = $keyword->id;
-        //         $item->name = $keyword->items;
-        //         $item->story = $keyword->story;
-        //         $item->price = $keyword->price;
-        //         $item->brand = $keyword->item_brand;
-        //         $item->url = $rws_item['Item']['itemUrl'];
-        //         $item->image_url = str_replace('?_ex=128x128', '', $rws_item['Item']['mediumImageUrls'][0]['imageUrl']);
-        //         $favorites[] = $item;
-        //     }
-        // }
-        
+       
         $data = [
             'user' => $user,
             'favorites' => $favorites,
@@ -335,108 +141,61 @@ class UsersController extends Controller
     public function mensearch(Request $request)
     {
         $number = rand();
-        
-        if(empty($request->all())) {
+        $page =array_get($request,'page');
+
+        if($page==null) {
             
             session(['mensearchkey' => $number]);
         } else {
             $number = session('mensearchkey');
         }
-        
-        $value = $request->answers;   
+       
+       
+        $value = $request->answers; 
+       
     
-        $items = \DB::table('items')->select('id','items','story','price', 'item_brand')->where('gender', '1')->where('kind', $value)->orderBy(\DB::raw('RAND('.$number.')'))->paginate(5);
-        // $items = [];
-        
-        // foreach($keywords as $keyword){
-        //     $gift = $keyword->item_brand;
-            
-        // if ($gift) {
-        //     $client = new \RakutenRws_Client();
-        //     $client->setApplicationId(env('RAKUTEN_APPLICATION_ID'));
-        //     $rws_response = $client->execute('IchibaItemSearch', [
-        //         'keyword' => $gift,
-        //         'imageFlag' => 1,
-        //         'hits' => 1,
-        //     ]);
-        // }
-    
-        //     // Creating "Item" instance to make it easy to handle.（not saving）
-        // foreach ($rws_response->getData()['Items'] as $rws_item) {
-        //         $item = new Item();
-        //         $item->code = $rws_item['Item']['itemCode'];
-        //         $item->id = $keyword->id;
-        //         $item->name = $keyword->items;
-        //         $item->story = $keyword->story;
-        //         $item->price = $keyword->price;
-        //         $item->brand = $keyword->item_brand;
-        //         $item->url = $rws_item['Item']['itemUrl'];
-        //         $item->image_url = str_replace('?_ex=128x128', '', $rws_item['Item']['mediumImageUrls'][0]['imageUrl']);
-        //         $items[] = $item;
-        //     }
-        // }
-        
-         
-        return view('users.menindex', [
+        $items = \DB::table('items')->select('id','items','story','price', 'item_brand','img_path')->where('gender', '1')->where('kind', $value)->orderBy(\DB::raw('RAND('.$number.')'))->paginate(5);
+        $items->appends(['answers' => $value]);
+
+        return view('users.kindmenindex', [
             'items' => $items, 
             
             ]);
+       
+            
+            
     }
     // 女性ページでの親密度検索
     public function womensearch(Request $request)
     {
         $number = rand();
         
-        if(empty($request->all())) {
+        $page =array_get($request,'page');
+        
+        if($page==null) {
             
             session(['womensearchkey' => $number]);
         } else {
             $number = session('womensearchkey');
         }
         
-        $value = $request->answers;   
-    
-        $items = \DB::table('items')->select('id','items','story','price', 'item_brand')->where('gender', '2')->where('kind', $value)->orderBy(\DB::raw('RAND('.$number.')'))->paginate(5);
-        // $items = [];
+        $value = $request->answers;
         
-        // foreach($keywords as $keyword){
-        //     $gift = $keyword->item_brand;
-            
-        // if ($gift) {
-        //     $client = new \RakutenRws_Client();
-        //     $client->setApplicationId(env('RAKUTEN_APPLICATION_ID'));
-        //     $rws_response = $client->execute('IchibaItemSearch', [
-        //         'keyword' => $gift,
-        //         'imageFlag' => 1,
-        //         'hits' => 1,
-        //     ]);
-        // }
     
-        //     // Creating "Item" instance to make it easy to handle.（not saving）
-        // foreach ($rws_response->getData()['Items'] as $rws_item) {
-        //         $item = new Item();
-        //         $item->code = $rws_item['Item']['itemCode'];
-        //         $item->id = $keyword->id;
-        //         $item->name = $keyword->items;
-        //         $item->story = $keyword->story;
-        //         $item->price = $keyword->price;
-        //         $item->brand = $keyword->item_brand;
-        //         $item->url = $rws_item['Item']['itemUrl'];
-        //         $item->image_url = str_replace('?_ex=128x128', '', $rws_item['Item']['mediumImageUrls'][0]['imageUrl']);
-        //         $items[] = $item;
-        //     }
-        // }
+        $items = \DB::table('items')->select('id','items','story','price', 'item_brand','img_path')->where('gender', '2')->where('kind', $value)->orderBy(\DB::raw('RAND('.$number.')'))->paginate(5);
+        $items->appends(['answers' => $value]);
 
 
-
-        return view('users.womenindex', [
+        return view('users.kindwomenindex', [
             'items' => $items,
             ]);
+    
     }
     
      public function searchindex()
     {
         $keyword = request()->keyword;
+        $keywords = request()->keywords;
         $items = [];
         if ($keyword) {
             $client = new \RakutenRws_Client();
@@ -460,7 +219,9 @@ class UsersController extends Controller
         }
         return view('users.searchindex', [
             'keyword' => $keyword,
+            'keywords' => $keywords,
             'items' => $items,
+            
         ]);
     } 
     

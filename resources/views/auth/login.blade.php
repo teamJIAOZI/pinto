@@ -1,28 +1,31 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="text-center">
-        <h1>Log in</h1>
+<div class="form-wrapper">
+  <h1>Login</h1>
+  
+  
+    {!! Form::open(['route' => 'login.post']) !!}
+    <div class="form-item">
+      <label for="name">name</label>
+      <input type="name" name="name" required="required" placeholder="name"></input>
     </div>
-
-    <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-
-            {!! Form::open(['route' => 'login.post']) !!}
-                <div class="form-group">
-                    {!! Form::label('name', 'Name') !!}
-                    {!! Form::text('name', old('name'), ['class' => 'form-control']) !!}
-                </div>
-
-                <div class="form-group">
-                    {!! Form::label('password', 'Password') !!}
-                    {!! Form::password('password', ['class' => 'form-control']) !!}
-                </div>
-
-                {!! Form::submit('Log in', ['class' => 'btn btn-primary btn-block']) !!}
-            {!! Form::close() !!}
-
-            <p>New user? {!! link_to_route('signup.get', 'Sign up now!') !!}</p>
-        </div>
+    <div class="form-item">
+      <label for="password">password</label>
+      <input type="password" name="password" required="required" placeholder="Password"></input>
     </div>
+    <div class="button-panel">
+      <input type="submit" class="button" title="Login" value="Login"></input>
+    </div>
+  {!! Form::close() !!}
+  <div class="form-footer">
+    <p>Create an account　 {!! link_to_route('signup.get', 'Sign up now!') !!}</p>
+  </div>
+</div>
 @endsection
+
+
+
+
+
+

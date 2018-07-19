@@ -4,8 +4,7 @@
 <?php $user = Auth::user(); ?>
     <p id="survey-ttl">親密度で絞り込む</p><br>
     
-     {!! Form::open(['route' => 'users.mensearch','method' => 'get']) !!}
-
+     {!! Form::open(['route' => 'users.womensearch','method' => 'get']) !!}
     
     <div class="radiobutton">
             <li><label>
@@ -40,12 +39,12 @@
     </div>
     
     {!! Form::close() !!}
-    {!! Form::open(['route' => 'users.menindex','method' => 'get']) !!}
+    {!! Form::open(['route' => 'users.womenindex','method' => 'get']) !!}
     <input class="button" type="submit" value="絞り込み解除">
     {!! Form::close() !!}
     
     <!--アイテム一覧ページをinclude-->
-    @include('users.index', ['user' => $user,'items' => $items])
+    @include('users.kindwomen', ['user' => $user,'items' => $items])
 
 @endsection
 

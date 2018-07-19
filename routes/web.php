@@ -17,7 +17,7 @@ use Illuminate\Http\Request;
 Route::get('/', function (Request $id) {
     if(Auth::check()){
         $user = User::find($id);
-        $itemboys = \DB::table('favorites')->join('items', 'favorites.favorite_id', '=', 'items.id')->select('items.*', \DB::raw('COUNT(*) as count'))->where('gender', 1)->groupBy('items.id', 'items.gender', 'items.items', 'items.story','items.created_at', 'items.updated_at','items.price','items.kind','items.item_brand')->orderBy('count', 'DESC')->take(3)->get();
+        $itemboys = \DB::table('favorites')->join('items', 'favorites.favorite_id', '=', 'items.id')->select('items.*', \DB::raw('COUNT(*) as count'))->where('gender', 1)->groupBy('items.id', 'items.gender', 'items.items', 'items.story','items.created_at', 'items.updated_at','items.price','items.kind','items.item_brand','items.img_path')->orderBy('count', 'DESC')->take(3)->get();
         // $itemboys = [];
         
         // foreach($boykeywords as $keyword){
@@ -57,7 +57,7 @@ Route::get('/', function (Request $id) {
         // ここまで男
         
         // ここから女
-        $itemgirls = \DB::table('favorites')->join('items', 'favorites.favorite_id', '=', 'items.id')->select('items.*', \DB::raw('COUNT(*) as count'))->where('gender', 2)->groupBy('items.id', 'items.gender', 'items.items', 'items.story','items.created_at', 'items.updated_at','items.price','items.kind','items.item_brand')->orderBy('count', 'DESC')->take(3)->get();
+        $itemgirls = \DB::table('favorites')->join('items', 'favorites.favorite_id', '=', 'items.id')->select('items.*', \DB::raw('COUNT(*) as count'))->where('gender', 2)->groupBy('items.id', 'items.gender', 'items.items', 'items.story','items.created_at', 'items.updated_at','items.price','items.kind','items.item_brand','items.img_path')->orderBy('count', 'DESC')->take(3)->get();
         // $itemgirls = [];
         
         // foreach($girlkeywords as $keyword){
@@ -124,6 +124,16 @@ Route::group(['middleware' => 'auth'], function () {
         
         Route::post('like', 'UserFavoriteController@store')->name('user.like');
         Route::delete('unlike', 'UserFavoriteController@destroy')->name('user.unlike');
+        
+        Route::post('favoritelike', 'UserFavoriteController@favoritestore')->name('user.favoritelike');
+        Route::delete('favoriteunlike', 'UserFavoriteController@favoritedestroy')->name('user.favoriteunlike');
+        
+        Route::post('menlike', 'UserFavoriteController@menstore')->name('user.menlike');
+        Route::delete('menunlike', 'UserFavoriteController@mendestroy')->name('user.menunlike');
+        
+        Route::post('womenlike', 'UserFavoriteController@womenstore')->name('user.womenlike');
+        Route::delete('womenunlike', 'UserFavoriteController@womendestroy')->name('user.womenunlike');
+        
         Route::get('menfavorites', 'UsersController@menfavorites')->name('users.menfavorites');
         Route::get('womenfavorites', 'UsersController@womenfavorites')->name('users.womenfavorites');
         

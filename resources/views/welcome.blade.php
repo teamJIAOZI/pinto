@@ -11,10 +11,10 @@
 
 @section('content')
      @if (Auth::check())
-        <?php $user = Auth::user(); ?>
-        {{ $user->name }}さん</br></br>
+        <font><h2><?php $user = Auth::user(); ?>
+        {{ $user->name }}さん</h2></br></br>
         
-        誰にあげますか</br>
+        <p2>誰にあげますか</br></p2></font>
         
         <a href="{{ route('users.loginwomenindex',['id' => $user->id] ) }}" class="cp_btnwomen">女性にあげる</a>
         
@@ -23,17 +23,17 @@
         
         </br>
         
-        男性人気ランキング
+        <titlefont><h3>男性人気ランキング</h3></titlefont>
         
         <div class="row">
         @foreach ($items as $key => $item)
         <div class = "item">
                 <div class="col-md-3 col-sm-4 col-xs-12">
-                       <div id = "nav">
+                       <div id = "nav"><font>
                            <ul>
                                <li>
                                   <div class="sample1">
-                                       
+                                      <img src="{{ $item->img_path }}" alt="story">
                                        <div class="mask">
                                           <div class="caption">{{ $item->story }}</div>
                                        </div>
@@ -44,7 +44,7 @@
 
                                </li>
                            </ul>
-                       </div>
+                       </div></font>
                  </div>
                  </div>
               
@@ -54,16 +54,16 @@
         
         
         
-        女性人気ランキング
+        <titlefont><h3>女性人気ランキング</h3></titlefont>
         <div class="row">
         @foreach ($itemgirls as $key => $itemgirl)
         <div class = "item">
                 <div class="col-md-3 col-sm-4 col-xs-12">
-                       <div id = "nav">
+                       <div id = "nav"><font>
                            <ul>
                                <li>
                                   <div class="sample1">
-                                      
+                                     <img src="{{ $itemgirl->img_path }}" alt="story"> 
                                        <div class="mask">
                                           <div class="caption">{{ $itemgirl->story }}</div>
                                        </div>
@@ -77,7 +77,7 @@
                             
                                </li>
                            </ul>
-                       </div>
+                       </div></font>
                  </div>
                  </div>
               
@@ -88,11 +88,13 @@
         
     @else
 
-        </br>誰にあげますか</br>
+        <font></br>誰にあげますか</br>
         
         <a href="{{ route('users.womenindex') }}" class="cp_btnwomen">女性にあげる</a>
         
-        <a href="{{ route('users.menindex') }}" class="cp_btnmen">男性にあげる</
+        <a href="{{ route('users.menindex') }}" class="cp_btnmen">男性にあげる</a>
+        
+        </font>
         
 
     @endif

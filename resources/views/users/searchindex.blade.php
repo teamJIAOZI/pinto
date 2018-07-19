@@ -4,6 +4,8 @@
 
 @if ($items)
     <div class="row">
+        <h1><?php print $keywords ?>の商品一覧</h1>
+        
         @foreach ($items as $key => $item)
             <div class="item">
                 <div class="col-md-3 col-sm-4 col-xs-12">
@@ -15,11 +17,7 @@
                             
         
                             <p class="text-center"><a href="{{ $item->url }}" target="_blank">{{ $item->name }}</a></p>
-                            <div class="buttons text-center">
-                                @if (Auth::check())
-                                    
-                                @endif
-                            </div>
+                            
                         </div>
                         
                     </div>
