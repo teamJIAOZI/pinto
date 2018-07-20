@@ -23,7 +23,7 @@ class UsersController extends Controller
         }
         
         
-        $items = \DB::table('items')->select('id', 'items','story','price', 'item_brand','img_path')->where('gender', '1')->orderBy(\DB::raw('RAND('.$number.')'))->paginate(12);
+        $items = \DB::table('items')->select('id', 'items','story','price', 'item_brand','img_path')->where('gender', '1')->orderBy(\DB::raw('random('.$number.')'))->paginate(12);
         
 
         return view('users.menindex', [
@@ -45,7 +45,7 @@ class UsersController extends Controller
         }
         
         
-        $items = \DB::table('items')->select('id','items','story','price', 'item_brand','img_path')->where('gender', '2')->orderBy(\DB::raw('RAND('.$number.')'))->paginate(12);
+        $items = \DB::table('items')->select('id','items','story','price', 'item_brand','img_path')->where('gender', '2')->orderBy(\DB::raw('random('.$number.')'))->paginate(12);
        
         return view('users.womenindex', [
             'items' => $items,
@@ -65,7 +65,7 @@ class UsersController extends Controller
             $number = session('loginmenindexkey');
         }
         
-         $items = \DB::table('items')->select('id','items','story','price', 'item_brand','img_path')->where('gender', '1')->orderBy(\DB::raw('RAND('.$number.')'))->paginate(12);
+         $items = \DB::table('items')->select('id','items','story','price', 'item_brand','img_path')->where('gender', '1')->orderBy(\DB::raw('random('.$number.')'))->paginate(12);
         
          $user = User::find($id);
         
@@ -88,7 +88,7 @@ class UsersController extends Controller
             $number = session('loginwomenindexkey');
         }
         
-         $items = \DB::table('items')->select('id','items','story','price', 'item_brand','img_path')->where('gender', '2')->orderBy(\DB::raw('RAND('.$number.')'))->paginate(12);
+         $items = \DB::table('items')->select('id','items','story','price', 'item_brand','img_path')->where('gender', '2')->orderBy(\DB::raw('random('.$number.')'))->paginate(12);
         
          $user = User::find($id);
          
@@ -154,7 +154,7 @@ class UsersController extends Controller
         $value = $request->answers; 
        
     
-        $items = \DB::table('items')->select('id','items','story','price', 'item_brand','img_path')->where('gender', '1')->where('kind', $value)->orderBy(\DB::raw('RAND('.$number.')'))->paginate(12);
+        $items = \DB::table('items')->select('id','items','story','price', 'item_brand','img_path')->where('gender', '1')->where('kind', $value)->orderBy(\DB::raw('random('.$number.')'))->paginate(12);
         $items->appends(['answers' => $value]);
 
         return view('users.kindmenindex', [
@@ -182,7 +182,7 @@ class UsersController extends Controller
         $value = $request->answers;
         
     
-        $items = \DB::table('items')->select('id','items','story','price', 'item_brand','img_path')->where('gender', '2')->where('kind', $value)->orderBy(\DB::raw('RAND('.$number.')'))->paginate(12);
+        $items = \DB::table('items')->select('id','items','story','price', 'item_brand','img_path')->where('gender', '2')->where('kind', $value)->orderBy(\DB::raw('random('.$number.')'))->paginate(12);
         $items->appends(['answers' => $value]);
 
 
