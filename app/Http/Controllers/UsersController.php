@@ -23,8 +23,16 @@ class UsersController extends Controller
         }
         
         
-        $items = \DB::table('items')->select('id', 'items','story','price', 'item_brand','img_path')->where('gender', '1')->inRandomOrder($number)->get();
+//        $items = \DB::table('items')->select('id', 'items','story','price', 'item_brand','img_path')->where('gender', '1')->inRandomOrder($number)->get();
+        $items = \DB::table('items')->select('id', 'items','story','price', 'item_brand','img_path')->where('gender', '1')->get();
         
+        srand($number);
+        for($i=0;$i<count($items);$i++) {
+            $j = rand(0,count($items)-1);
+            $t = $items[$i];
+            $items[$i] = $items[$j];
+            $items[$j] = $t;
+        }
 
         return view('users.menindex', [
             'items' => $items,
@@ -65,7 +73,19 @@ class UsersController extends Controller
             $number = session('loginmenindexkey');
         }
         
-        $items = \DB::table('items')->select('id','items','story','price', 'item_brand','img_path')->where('gender', '1')->inRandomOrder($number)->get();
+        // $items = \DB::table('items')->select('id','items','story','price', 'item_brand','img_path')->where('gender', '1')->inRandomOrder($number)->get();
+
+        $items = \DB::table('items')->select('id', 'items','story','price', 'item_brand','img_path')->where('gender', '1')->get();
+        
+        srand($number);
+        for($i=0;$i<count($items);$i++) {
+            $j = rand(0,count($items)-1);
+            $t = $items[$i];
+            $items[$i] = $items[$j];
+            $items[$j] = $t;
+        }
+
+
 
          $user = User::find($id);
         
