@@ -69,8 +69,8 @@
                                           <div class="caption">{{ $itemgirl->story }}</div>
                                        </div>
                                   </div>
-                                  <a href="{{ route('users.searchindex', ['keyword' => $itemgirl->item_brand,'keywords' => $itemgirl->items] ) }}" class="cp_btnwomen">{{ $key+1 }}位: {{ $item->count}} Favorite </br>
-                                  {{ $item->items }}</br>相場:￥{{ $item->price }}</a>
+                                  <a href="{{ route('users.searchindex', ['keyword' => $itemgirl->item_brand,'keywords' => $itemgirl->items] ) }}" class="cp_btnwomen">{{ $key+1 }}位: {{ $itemgirl->count}} Favorite </br>
+                                  {{ $itemgirl->items }}</br>相場:￥{{ $itemgirl->price }}</a>
                                   
                                   @include('user_favorite.favorite_button', ['user' => $user])
                                   
