@@ -32,13 +32,13 @@ class ItemStorySeeder extends Seeder
 'price' => 2000,
 'kind' => 2,
 'item_brand' => 'RMK　リップグロス',
-'img_path'=>'https://tshop.r10s.jp/benavi/cabinet/06/rmk123006_1.jpg?downsize=250:*'
+'img_path'=>'https://tshop.r10s.jp/benavi/cabinet/06/rmk123006_1.jpg?'
 ],
 [
 'id' =>8,
-'gender' => 2,
-'items' => ' gelato piqueのブランケット',
-'story' => 'ふわふわ好き女子には間違いないブランド。ブランケットだとオフィスでも使えるし、かわいさも実用性もばっちり！',
+'gender' =>2,
+'items' =>'gelato piqueのブランケット',
+'story' =>'ふわふわ好き女子には間違いないブランド。ブランケットだとオフィスでも使えるし、かわいさも実用性もばっちり！',
 'price' => 6000,
 'kind' => 2,
 'item_brand' => 'ジェラートピケ　ブランケット　レディース',
@@ -49,7 +49,7 @@ class ItemStorySeeder extends Seeder
 'gender' => 1,
 'items' => '自転車ヘルメット',
 'story' => '自転車が趣味なあの人に。アクティブな週末を過ごそう！',
-'price' => 30000,
+'price' =>30000,
 'kind' => 4,
 'item_brand' => 'Specialized　自転車ヘルメット',
 'img_path'=>'https://tshop.r10s.jp/jitensya-ousama/cabinet/bell/p-bell-hlmt128.jpg'
@@ -261,7 +261,7 @@ class ItemStorySeeder extends Seeder
 'story' => '大学の卒業祝いに。',
 'price' => 1000,
 'kind' => 2,
-'item_brand' => 'ハンカチ　レディースhttps://tshop.r10s.jp/bugyo/cabinet/lezar/pen_10574.jpg?fitin=275:275',
+'item_brand' => 'ハンカチ　レディース',
 'img_path'=>'https://tshop.r10s.jp/acrop/cabinet/05280295/imgrc0074988590.jpg'
 ],
 [
@@ -371,7 +371,7 @@ class ItemStorySeeder extends Seeder
 'story' => '大人の恋人には、ちゃんとした物を贈りたい！シンプルで落ち着いたものを。',
 'price' => 20000,
 'kind' => 4,
-'item_brand' => '土屋鞄　財布',
+'item_brand' =>'土屋鞄　財布',
 'img_path'=>'https://image.rakuten.co.jp/takuminowaza/cabinet/urbano/18ss/money-clip_top1.jpg'
 ],
 [
@@ -1541,7 +1541,7 @@ class ItemStorySeeder extends Seeder
 'story' => '暑い夏のちょっとしたプレゼントにはぴったり。',
 'price' =>550,
 'kind' =>1,
-'item_brand' => ' iphone　扇風機',
+'item_brand' =>'iphone　扇風機',
 'img_path'=>' https://tshop.r10s.jp/fiara1/cabinet/05623066/imgrc0068668343.jpg'
 ],
 [
@@ -1551,16 +1551,16 @@ class ItemStorySeeder extends Seeder
 'story' => '家でもおしゃれな雰囲気が味わえる。',
 'price' =>550,
 'kind' =>1,
-'item_brand' => ' LEDライトアップグラス',
+'item_brand' =>'LEDライトアップグラス',
 'img_path'=>' https://tshop.r10s.jp/acomes/cabinet/item10/53108.jpg'
 ],
 [
 'id' =>192,
-'gender' =>2,
-'items' => 'ムーミンサシェ　ルームフレグランス',
-'story' => '部屋中いい香りに。これを使ってリラックスしてね。',
-'price' =>540,
-'kind' =>1,
+'gender'=>2,
+'items'=> 'ムーミンサシェ　ルームフレグランス',
+'story'=> '部屋中いい香りに。これを使ってリラックスしてね。',
+'price'=>540,
+'kind'=>1,
 'item_brand' => 'ムーミンサシェ',
 'img_path'=>'https://tshop.r10s.jp/richcandle/cabinet/gpp3/mmrk17.jpg'
 ],
@@ -1628,7 +1628,7 @@ class ItemStorySeeder extends Seeder
 'id' =>199,
 'gender' => 1,
 'items' => 'シューシャインセット',
-'story' => '「パリではね、女の子はとびっきりいい靴を履きなさいっていわれてるの。そうすれば靴が自然と素敵なところへ連れてってくれるんですって」　ｂｙ　花より男子',
+'story' => '「パリではね、女の子はとびっきりいい靴を履きなさいっていわれてるの。そうすれば靴が自然と素敵なところへ連れてってくれるんですって」by花より男子',
 'price' =>5800,
 'kind' =>5,
 'item_brand' => 'シューシャインセット',
@@ -1732,17 +1732,17 @@ class ItemStorySeeder extends Seeder
 'price' =>2980,
 'kind' =>3,
 'item_brand' => 'ジルスチュアート　香水',
-'img_path'=>'https://tshop.r10s.jp/lunadea/cabinet/jillstuart/img59919799.jpg?fitin=275:275'
+'img_path'=>'https://tshop.r10s.jp/lunadea/cabinet/jillstuart/img59919799.jpg'
 ],
 [
 'id' =>210,
 'gender' =>2,
-'items' => 'LUSHのギフトセット',
-'story' => '箱から可愛いLUSHのギフトボックス！もらったらテンション上がります。日々のお風呂が楽しみになる♪',
+'items' =>'LUSHのギフトセット',
+'story' =>'箱から可愛いLUSHのギフトボックス！もらったらテンション上がります。日々のお風呂が楽しみになる♪',
 'price' =>3800,
 'kind' =>3,
 'item_brand' => 'ラッシュ　ギフトボックス',
-'img_path'=>'https://tshop.r10s.jp/marz-shop/cabinet/img04/lush-037.jpg?fitin=275:275'
+'img_path'=>'https://tshop.r10s.jp/marz-shop/cabinet/img04/lush-037.jpg'
 ],
 [
 'id' =>211,
@@ -1856,7 +1856,7 @@ class ItemStorySeeder extends Seeder
 ],
 [
 'id' =>222,
-'gender' =>2,
+'gender'=>2,
 'items' => ' THE BODY SHOPのボディバター',
 'story' => 'お風呂あがりのマッサージに欠かせないボディバターは、ボディショップが定番♪種類も充実しています♡',
 'price' =>2000,
@@ -2001,7 +2001,7 @@ class ItemStorySeeder extends Seeder
 'story' => '平成最後の夏！！スイカ割りと見せかけて、スイカ型のバームクーヘン。みんなとシェアして楽しもう。',
 'price' =>3680,
 'kind' =>1,
-'item_brand' => 'すいか　バームクーヘン',
+'item_brand' =>'すいか　バームクーヘン',
 'img_path'=>'https://tshop.r10s.jp/etaiyou/cabinet/soreiyu/suika/2018summer_suika.jpg'
 ],
 [
@@ -2011,7 +2011,7 @@ class ItemStorySeeder extends Seeder
 'story' => 'いつも頑張っているご褒美にと突然仲のいい先輩がくれたプレゼント。ちょっと頑張った日には、このカードでおいしいフラペチーノでも飲んじゃおう。',
 'price' => 1000,
 'kind' => 1,
-'item_brand' => 'スタバカード',
+'item_brand' =>'スタバカード',
 'img_path'=>'https://tshop.r10s.jp/mtony/cabinet/04010877/imgrc0066821990.jpg'
 ],
 [
@@ -2062,7 +2062,7 @@ class ItemStorySeeder extends Seeder
 'price' => 700,
 'kind' => 1,
 'item_brand' => '今治タオル',
-'img_path'=>' https://tshop.r10s.jp/oruta/cabinet/bath/life_bt.jpg'
+'img_path'=>'https://tshop.r10s.jp/oruta/cabinet/bath/life_bt.jpg'
 ], 
 [
 'id' =>243,
@@ -2072,8 +2072,8 @@ class ItemStorySeeder extends Seeder
 ジェリービーンズやチョコレートなどのお菓子を入れるのも良し。',
 'price' => 1000,
 'kind' => 1,
-'item_brand' => 'スナックディスペンサー',
-'img_path'=>' https://tshop.r10s.jp/sincere-watch/cabinet/img08/snackdispenser_002m.jpg'
+'item_brand'=> 'スナックディスペンサー',
+'img_path'=>'https://tshop.r10s.jp/sincere-watch/cabinet/img08/snackdispenser_002m.jpg'
 ], 
 [
 'id' =>244,
@@ -2083,7 +2083,7 @@ class ItemStorySeeder extends Seeder
 'price' => 700,
 'kind' => 1,
 'item_brand' => '栽培キット',
-'img_path'=>' https://tshop.r10s.jp/saienlife/cabinet/03728321/imgrc0094503318.jpg'
+'img_path'=>'https://tshop.r10s.jp/saienlife/cabinet/03728321/imgrc0094503318.jpg'
 ], 
 [
 'id' =>245,
@@ -2093,7 +2093,7 @@ class ItemStorySeeder extends Seeder
 'price' => 700,
 'kind' => 1,
 'item_brand' => 'サボテン',
-'img_path'=>' https://tshop.r10s.jp/gold/hanaki-web/sif/plant/tanimaru.jpg'
+'img_path'=>'https://tshop.r10s.jp/gold/hanaki-web/sif/plant/tanimaru.jpg'
 ], 
 [
 'id' =>246,
@@ -2103,7 +2103,7 @@ class ItemStorySeeder extends Seeder
 'price' => 1000,
 'kind' => 1,
 'item_brand' => '箸',
-'img_path'=>' https://tshop.r10s.jp/wayukan/cabinet/05587132/imgrc0069235203.jpg'
+'img_path'=>'https://tshop.r10s.jp/wayukan/cabinet/05587132/imgrc0069235203.jpg'
 ], 
 [
 'id' =>247,
@@ -2113,7 +2113,7 @@ class ItemStorySeeder extends Seeder
 'price' => 700,
 'kind' => 1,
 'item_brand' => 'ベートーベンディッシュ',
-'img_path'=>' https://tshop.r10s.jp/partyparadise/cabinet/img-item/sa/sa-2208-1.jpg'
+'img_path'=>'https://tshop.r10s.jp/partyparadise/cabinet/img-item/sa/sa-2208-1.jpg'
 ], 
 [
 'id' =>248,
@@ -2155,7 +2155,337 @@ class ItemStorySeeder extends Seeder
 'item_brand' => 'キーホルダー',
 'img_path'=>'https://tshop.r10s.jp/e-mono-online-shop/cabinet/items/mobac/mb-0070_img01_n.jpg'
 ], 
-
+[
+'id' =>252,
+'gender' => 1,
+'items' => 'ギフト券',
+'story' => 'あらゆるギフト券をプレゼントで、相手に選択権を任せよう！',
+'price' => 1000,
+'kind' => 1,
+'item_brand' => 'ギフト券',
+'img_path'=>'https://tshop.r10s.jp/31icecream/cabinet/mem_item/item_01_01.jpg'
+],
+[
+'id' =>253,
+'gender' => 1,
+'items' => 'ノート',
+'story' => '学生から社会人へのプレゼントおすすめ！',
+'price' => 500,
+'kind' => 1,
+'item_brand' => 'ノート',
+'img_path'=>'https://tshop.r10s.jp/penport/cabinet/52/nos-113a-5p_1.jpg'
+], 
+[
+'id' =>254,
+'gender' => 1,
+'items' => 'ボールペン',
+'story' => '学生から社会人へのプレゼントおすすめ！',
+'price' => 500,
+'kind' => 1,
+'item_brand' => 'ボールペン',
+'img_path'=>'https://tshop.r10s.jp/kingdomnote/cabinet/new_060/4012700806178_1.jpg'
+], 
+[
+'id' =>255,
+'gender' => 1,
+'items' => 'お菓子',
+'story' => '友達にお菓子の詰め合わせをあげたらかなりよろこんでくれた！',
+'price' => 1000,
+'kind' => 1,
+'item_brand' => 'お菓子',
+'img_path'=>'https://tshop.r10s.jp/at-life/cabinet/pic02/4901006110228.jpg'
+], 
+[
+'id' =>256,
+'gender' => 1,
+'items' => 'チョコレート',
+'story' => '友達に朝食にチョコレートをすすめよう！',
+'price' => 500,
+'kind' => 1,
+'item_brand' => 'チョコレート',
+'img_path'=>'https://tshop.r10s.jp/takano-eshop/cabinet/item/24959108012766.jpg'
+], 
+[
+'id' =>257,
+'gender' => 1,
+'items' => 'ハンドクリーム',
+'story' => 'デキる男の手肌ケア。',
+'price' => 700,
+'kind' => 1,
+'item_brand' => 'ハンドクリーム　メンズ',
+'img_path'=>'https://tshop.r10s.jp/wish/cabinet/earth2picture/blackolivehcream.jpg'
+], 
+[
+'id' =>258,
+'gender' => 1,
+'items' => '箸置き',
+'story' => 'シンプルでおしゃれ、一人暮らしの友達におすすめ！',
+'price' => 100,
+'kind' => 1,
+'item_brand' => '箸置き',
+'img_path'=>'https://tshop.r10s.jp/asia-kobo/cabinet/tableware/m11292-1.jpg'
+], 
+[
+'id' =>259,
+'gender' => 1,
+'items' => 'ボウル',
+'story' => 'コストパフォーマンスが高いプレゼント！',
+'price' => 700,
+'kind' => 1,
+'item_brand' =>'ボウル',
+'img_path'=>'https://tshop.r10s.jp/sadamoku/cabinet/shohin/syokki/05900101/1bn212.jpg'
+], 
+[
+'id' =>260,
+'gender' => 1,
+'items' => '石鹸',
+'story' => '全身さっぱりすべすべ。ソフトな泡立ちでお肌にやさしい石けん。',
+'price' => 200,
+'kind' => 1,
+'item_brand' => '石鹸',
+'img_path'=>'https://tshop.r10s.jp/biccamera/cabinet/product/0390/00000001591576_a01.jpg'
+], 
+[
+'id' =>261,
+'gender' => 1,
+'items' => 'ウェットティッシュ',
+'story' => '熱い夏に清涼感をプレゼント！',
+'price' => 500,
+'kind' => 1,
+'item_brand' => 'ウェットティッシュ　メンズ',
+'img_path'=>'https://tshop.r10s.jp/amazing-co/cabinet/01613755/imgrc0064520041.jpg'
+], 
+[
+'id' =>262,
+'gender' => 1,
+'items' => '万年筆',
+'story' => '書き味を満喫しよう！',
+'price' => 7000,
+'kind' => 4,
+'item_brand' => '万年筆',
+'img_path'=>'https://tshop.r10s.jp/swallow/cabinet/platinum/century_fp_black.jpg'
+], 
+[
+'id' =>263,
+'gender' => 1,
+'items' => 'スポーツようかん',
+'story' => 'ギュッと押すだけで食べられる即効性と持続性の糖質を配合した運動時に適した羊羹です',
+'price' => 600,
+'kind' => 1,
+'item_brand' => 'スポーツようかん',
+'img_path'=>'https://tshop.r10s.jp/alpen/cabinet/2017_fw_11/3417660300.jpg'
+], 
+[
+'id' =>264,
+'gender' => 1,
+'items' => 'ブラン クチュール 手帳カバー',
+'story' => '希少なオール本革製のルーズリーフバインダー
+ヌメ素材の国産レザーが醸し出す圧倒的な存在感を味わう',
+'price' => 6000,
+'kind' => 4,
+'item_brand' => 'ブラン クチュール 手帳カバー',
+'img_path'=>'https://tshop.r10s.jp/blanc-couture/cabinet/item_images/system/qvc-01_img01.jpg'
+], 
+[
+'id' =>265,
+'gender' => 1,
+'items' => 'ペアウォッチ',
+'story' => 'フォーマルにもデイリーにもあわせられるシンプルなデザインは、ペアウォッチにもプレゼントにも最適な腕時計となるでしょう。',
+'price' => 20000,
+'kind' => 4,
+'item_brand' => 'ペアウォッチ',
+'img_path'=>'https://tshop.r10s.jp/brights/cabinet/05639454/imgrc0073665095.jpg'
+],
+[
+'id' =>266,
+'gender' =>1,
+'items' => 'トートバッグ',
+'story' => 'これなら実用性ばっちりで喜んでもらえる。',
+'price' =>3024,
+'kind' =>2,
+'item_brand' => 'トートバッグ　メンズ',
+'img_path'=>'https://tshop.r10s.jp/msjeans/cabinet/06031676/18ss1960501.jpg'
+],
+[
+'id' =>267,
+'gender' =>1,
+'items' => 'Fridgeezoo',
+'story' => '冷蔵庫をあけるとしゃべりだす。一人暮らしの友人に。',
+'price' =>2200,
+'kind' =>2,
+'item_brand' => 'Fridgeezoo',
+'img_path'=>'https://tshop.r10s.jp/biccamera/cabinet/product/2354/00000003457886_a01.jpg'
+],
+[
+'id' =>268,
+'gender' =>1,
+'items' => 'ココナッツオイル',
+'story' => '美容に良いとして女性に人気のココナッツオイル。メタボにも効果があるらしい。男性も取り入れてみると良いかも。',
+'price' =>1695,
+'kind' =>2,
+'item_brand' => 'ココナッツオイル',
+'img_path'=>'https://tshop.r10s.jp/jyugo/cabinet/k-sonota/4582405121390.jpg'
+],
+[
+'id' =>269,
+'gender' =>2,
+'items' => '晴雨予報グラス',
+'story' => '今日は午後からお出かけ。晴れるかなー。数時間後の天気を楽しみながら知れちゃう。',
+'price' =>1700,
+'kind' =>2,
+'item_brand' => '晴雨予報グラス',
+'img_path'=>'https://tshop.r10s.jp/keitaistrap/cabinet/00881788/47-519607.jpg'
+],
+[
+'id' =>270,
+'gender' =>1,
+'items' => 'プロペラ目覚まし',
+'story' => '朝が苦手でよく遅刻している友達に。これで嫌でも起きれる！',
+'price' =>4500,
+'kind' =>2,
+'item_brand' => '空飛ぶ　目覚まし',
+'img_path'=>'https://tshop.r10s.jp/shopgl/cabinet/img/096/usgl18apnw7024.jpg'
+],
+[
+'id' =>271,
+'gender' =>1,
+'items' => 'ワイヤレス　ポータブルスピーカー',
+'story' => '音楽を好きな時に、好きな場所に持ち運ぼう。音楽好きの友人に。',
+'price' =>3900,
+'kind' =>2,
+'item_brand' => 'ポータブルスピーカー',
+'img_path'=>'https://tshop.r10s.jp/avantfashion/cabinet/shohin/sumaho/s52cd-253-001.jpg'
+],
+[
+'id' =>272,
+'gender' =>1,
+'items' => 'クリップス',
+'story' => '整理整頓が苦手な彼に。重要な書類無くさないようにプレゼントしました。',
+'price' =>432,
+'kind' =>2,
+'item_brand' => 'クリップス',
+'img_path'=>' https://tshop.r10s.jp/wrapping/cabinet/stationery/4901427167238-01.gif'
+],
+[
+'id' =>273,
+'gender' =>1,
+'items' => 'SAMOURAIの香水',
+'story' => 'モテる男に条件！アツい男の友情に爽やかなプレゼント',
+'price' =>1687,
+'kind' =>3,
+'item_brand' => 'サムライ　香水',
+'img_path'=>'https://tshop.r10s.jp/osharecafe/cabinet/product/fr_images/smr-5000447.jpg'
+],
+[
+'id' =>274,
+'gender' =>1,
+'items' => '叫びの壺',
+'story' => 'ストレス発散に！意外と高い(笑)',
+'price' =>5112,
+'kind' =>3,
+'item_brand' => '叫びの壺',
+'img_path'=>'https://tshop.r10s.jp/lunamer/cabinet/0-sam_2/10018589.jpg'
+],
+[
+'id' =>275,
+'gender' =>1,
+'items' => 'サッカー日本代表のバスタオル',
+'story' => 'いくつあっても困らないバスタオルは、サッカー好きにはたまらない！イケメンなサムライジャパンで',
+'price' =>3779,
+'kind' =>3,
+'item_brand' => '日本代表　バスタオル',
+'img_path'=>'https://tshop.r10s.jp/cinemacollection/cabinet/r20180620/mrs-1855000800.jpg'
+],
+[
+'id' =>276,
+'gender' =>1,
+'items' => 'BEN DAVISのスマホケース',
+'story' => 'パスモやカードの入る手帳型のスマホケース。デザイン性のあるかっこいいデザインをチョイス',
+'price' =>2700,
+'kind' =>3,
+'item_brand' => 'ベンデイビス　スマホケース',
+'img_path'=>'https://tshop.r10s.jp/saifubagya/cabinet/bendavis/bdw-9079_01.jpg'
+],
+[
+'id' =>277,
+'gender' =>1,
+'items' => '電子タバコセット',
+'story' => 'ヘビースモーカーの親友に。色もカラフルでおしゃれ！',
+'price' =>3980,
+'kind' =>3,
+'item_brand' => '電子タバコセット',
+'img_path'=>'https://tshop.r10s.jp/dress-asa/cabinet/dtk/emili/emp-top-2.jpg'
+],
+[
+'id' =>278,
+'gender' =>1,
+'items' => 'IL BISONTEの名刺入れ',
+'story' => 'プレゼントの定番の名刺入れ。周りと差をつけるイルビゾンテで。',
+'price' =>6000,
+'kind' =>3,
+'item_brand' => 'イルビゾンテ　名刺入れ',
+'img_path'=>'https://tshop.r10s.jp/alevel/cabinet/ilbisonte/c0470-153.jpg'
+],
+[
+'id' =>279,
+'gender' =>1,
+'items' => 'プロテイン',
+'story' => '筋トレしている人におすすめ！本人の好きなプロテインをリサーチしてプレゼントするのもありです。',
+'price' =>4090,
+'kind' =>3,
+'item_brand' => 'プロテイン',
+'img_path'=>'https://tshop.r10s.jp/step-sports/cabinet/cz7427.jpg'
+],
+[
+'id' =>280,
+'gender' =>1,
+'items' => 'ダンベルセット',
+'story' => '鍛えたい人におすすめ。場所を取らず、自宅でも簡単にトレーニングできるダンベルが便利！',
+'price' =>6000,
+'kind' =>3,
+'item_brand' => 'ダンベルセット',
+'img_path'=>'https://tshop.r10s.jp/gold/wildfit/danberu/redraba-danberu-30.jpg'
+],
+[
+'id' =>281,
+'gender' =>1,
+'items' => 'Manhattan Portageのリュック',
+'story' => 'リュックの定番、マンハッタンポーテージ！はずれのないチョイスです',
+'price' =>10000,
+'kind' =>3,
+'item_brand' =>'マンハッタンポーテージ　リュック',
+'img_path'=>'https://tshop.r10s.jp/anagram/cabinet/main/mp1218-a.jpg'
+],
+[
+'id' =>282,
+'gender' =>1,
+'items' => '電動歯ブラシ',
+'story' => '面白い&貰って嬉しいプレゼント！',
+'price' =>5000,
+'kind' =>3,
+'item_brand' => '電動歯ブラシ',
+'img_path'=>'https://tshop.r10s.jp/biccamera/cabinet/product/2375/00000003462962_a01.jpg'
+],
+[
+'id' =>283,
+'gender' =>1,
+'items' => 'ビールセット',
+'story' => '酒豪の友達とワイワイ飲むのにおすすめ。いろんなビールを飲み比べできるセットが手軽に買えます',
+'price' =>5000,
+'kind' =>3,
+'item_brand' => 'ビールセット',
+'img_path'=>'https://tshop.r10s.jp/terazuya/cabinet/bs21/mstr15_10.jpg'
+],
+[
+'id' =>284,
+'gender' =>1,
+'items' =>'BURBERRYのコインケース',
+'story' =>'紳士なバーバリー。小銭入れなら手軽にかっこいいのが買えます！ ',
+'price' =>8500,
+'kind' =>3,
+'item_brand' => 'バーバリー　小銭入れ',
+'img_path'=>'https://tshop.r10s.jp/auc-alpage/cabinet/02485851/img63094773.jpg'
+],
 
 ]);
 }
