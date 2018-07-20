@@ -30,4 +30,3 @@
               
         @endforeach
 </div>
-{!! $items->links() !!}
