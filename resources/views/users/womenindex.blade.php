@@ -6,7 +6,7 @@
             
      {!! Form::open(['route' => 'users.womensearch','method' => 'get']) !!}
      
-    <div class="radiobutton">
+        <div class="radiobutton">
             <li><label>
                 <input type="radio" name="answers" id="select1" value=5>
                 <label for="select1">家族</label>

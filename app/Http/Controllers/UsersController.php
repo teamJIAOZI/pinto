@@ -65,7 +65,7 @@ class UsersController extends Controller
             $number = session('loginmenindexkey');
         }
         
-         $items = \DB::table('items')->select('id','items','story','price', 'item_brand','img_path')->where('gender', '1')->inRandomOrder($number)->paginate(12);
+         $items = \DB::table('items')->select('id','items','story','price', 'item_brand','img_path')->where('gender', '1')->inRandomOrder(1)->paginate(12);
         
          $user = User::find($id);
         

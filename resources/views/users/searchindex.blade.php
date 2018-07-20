@@ -13,10 +13,9 @@
                         <div class="panel-heading text-center">
                             <img src="{{ $item->image_url }}" alt="" class="">
                         </div>
-                        <div class="panel-body">
-                            
-        
-                            <p class="text-center"><a href="{{ $item->url }}" target="_blank">{{ $item->name }}</a></p>
+                        <div class="panel-body1">
+                          
+                            <p class="item-title"><a href="{{ $item->url }}" target="_blank">{{ $item->name }}</a></p>
                             
                         </div>
                         

@@ -80,9 +80,25 @@ li{
 .search {
     margin-bottom: 20px;
 }
+
+p.item-title {
+    /* Keep the number of lines in a sentence on two lines, and add "..." to the end of line. */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
 /* item */
 .item .panel-body {
     height: 70px;
+}
+
+.item .panel-body1{
+        display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
 }
 .item .panel-heading {
     height: 250px;
@@ -216,6 +232,7 @@ p{
     font-family: 'Caveat', cursive;
 }
 
+/*   親密度ボタン   */
 
 .radiobutton input{
 	display: none;

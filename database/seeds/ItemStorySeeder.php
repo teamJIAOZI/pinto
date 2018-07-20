@@ -51,7 +51,7 @@ class ItemStorySeeder extends Seeder
 'story' => '自転車が趣味なあの人に。アクティブな週末を過ごそう！',
 'price' => 30000,
 'kind' => 4,
-'item_brand' => 'Specialized　自転車ヘルメット',
+'item_brand' => '自転車ヘルメット',
 'img_path'=>'https://tshop.r10s.jp/jitensya-ousama/cabinet/bell/p-bell-hlmt128.jpg'
 ],
 [
