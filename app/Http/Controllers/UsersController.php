@@ -53,7 +53,17 @@ class UsersController extends Controller
         }
         
         
-        $items = \DB::table('items')->select('id','items','story','price', 'item_brand','img_path')->where('gender', '2')->inRandomOrder($number)->get();
+        // $items = \DB::table('items')->select('id','items','story','price', 'item_brand','img_path')->where('gender', '2')->inRandomOrder($number)->get();
+       $items = \DB::table('items')->select('id', 'items','story','price', 'item_brand','img_path')->where('gender', '1')->get();
+        
+        srand($number);
+        for($i=0;$i<count($items);$i++) {
+            $j = rand(0,count($items)-1);
+            $t = $items[$i];
+            $items[$i] = $items[$j];
+            $items[$j] = $t;
+        }
+       
        
         return view('users.womenindex', [
             'items' => $items,
@@ -108,7 +118,17 @@ class UsersController extends Controller
             $number = session('loginwomenindexkey');
         }
         
-         $items = \DB::table('items')->select('id','items','story','price', 'item_brand','img_path')->where('gender', '2')->inRandomOrder($number)->get();
+        //  $items = \DB::table('items')->select('id','items','story','price', 'item_brand','img_path')->where('gender', '2')->inRandomOrder($number)->get();
+        
+        $items = \DB::table('items')->select('id', 'items','story','price', 'item_brand','img_path')->where('gender', '1')->get();
+        
+        srand($number);
+        for($i=0;$i<count($items);$i++) {
+            $j = rand(0,count($items)-1);
+            $t = $items[$i];
+            $items[$i] = $items[$j];
+            $items[$j] = $t;
+        }
         
          $user = User::find($id);
          
@@ -174,7 +194,17 @@ class UsersController extends Controller
         $value = $request->answers; 
        
     
-        $items = \DB::table('items')->select('id','items','story','price', 'item_brand','img_path')->where('gender', '1')->where('kind', $value)->inRandomOrder($number)->get();
+        // $items = \DB::table('items')->select('id','items','story','price', 'item_brand','img_path')->where('gender', '1')->where('kind', $value)->inRandomOrder($number)->get();
+        
+        $items = \DB::table('items')->select('id', 'items','story','price', 'item_brand','img_path')->where('gender', '1')->get();
+        
+        srand($number);
+        for($i=0;$i<count($items);$i++) {
+            $j = rand(0,count($items)-1);
+            $t = $items[$i];
+            $items[$i] = $items[$j];
+            $items[$j] = $t;
+        }
         
 
         return view('users.kindmenindex', [
@@ -202,8 +232,16 @@ class UsersController extends Controller
         $value = $request->answers;
         
     
-        $items = \DB::table('items')->select('id','items','story','price', 'item_brand','img_path')->where('gender', '2')->where('kind', $value)->inRandomOrder($number)->get();
-
+        // $items = \DB::table('items')->select('id','items','story','price', 'item_brand','img_path')->where('gender', '2')->where('kind', $value)->inRandomOrder($number)->get();
+        $items = \DB::table('items')->select('id', 'items','story','price', 'item_brand','img_path')->where('gender', '1')->get();
+        
+        srand($number);
+        for($i=0;$i<count($items);$i++) {
+            $j = rand(0,count($items)-1);
+            $t = $items[$i];
+            $items[$i] = $items[$j];
+            $items[$j] = $t;
+        }
         
         return view('users.kindwomenindex', [
             'items' => $items,
