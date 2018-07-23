@@ -35,10 +35,13 @@ class ItemsController extends Controller
                 $item->name = $gift;
                 $item->story = $keyword->story;
                 $item->url = $rws_item['Item']['itemUrl'];
+                $item->price = $rws_item['Item']['itemPrice'];
                 $item->image_url = str_replace('?_ex=128x128', '', $rws_item['Item']['mediumImageUrls'][0]['imageUrl']);
                 $items[] = $item;
             }
         }
+        
+        
         
         return view('items.create', [
             'keyword' => $keyword,

@@ -30,6 +30,7 @@
             @include('commons.error_messages')
 
             @yield('content')
+            @yield('about')
         </div>
     </body>
 </html>

@@ -17,10 +17,8 @@
         <p2>誰にあげますか</br></p2></font>
         
         <a href="{{ route('users.loginwomenindex',['id' => $user->id] ) }}" class="cp_btnwomen">女性にあげる</a>
-        
         <a href="{{ route('users.loginmenindex',['id' => $user->id] ) }}" class="cp_btnmen">男性にあげる</a>
-
-        
+       
         </br>
         
         <titlefont><h3>男性人気ランキング</h3></titlefont>
@@ -48,13 +46,10 @@
                        </div></font>
                  </div>
                  </div>
-              
         @endforeach
 </div>
         
-        
-        
-        
+
         <titlefont><h3>女性人気ランキング</h3></titlefont>
         <div class="row">
         @foreach ($itemgirls as $key => $itemgirl)
@@ -73,15 +68,12 @@
                                   {{ $itemgirl->items }}</br>相場:￥{{ $itemgirl->price }}</a>
                                   
                                   @include('user_favorite.favorite_button', ['user' => $user, 'item' => $itemgirl])
-                                  
-                            
-                            
+
                                </li>
                            </ul>
                        </div></font>
                  </div>
                  </div>
-              
         @endforeach
 </div>
         
@@ -97,6 +89,27 @@
         
         </font>
         
-
     @endif
+    
+    @section('about')
+    <main>
+        <div class="header">
+        </div>
+
+        <div class="division">
+            <h1>Pintoとは</h1>
+            <p>新たなコミュニケーション。</p>
+          </div>
+          <div class="division">
+            <img src="images/coffee.jpg" alt="">
+            <p></p>
+      </div>
+     
+    </main>
+
+    @endsection
+        
+        
+
+
 @endsection

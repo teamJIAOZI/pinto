@@ -1,14 +1,18 @@
 @charset "utf-8";
+
 /* body */
 body {
-    background: #FFFFF0;
+  background: #FFF;
+  color: #5e5e5e;
+  font: 1.5em 'Open Sans', sans-serif;
 }
+
 footer {
     margin-top: 40px;
 }
 /* navbar */
 .navbar {
-    background-color: #AFEEEE;
+    background-color: #CCFFFF;
 }
 .navbar-header img {
     margin-top: 5px;
@@ -81,14 +85,6 @@ li{
     margin-bottom: 20px;
 }
 
-p.item-title {
-    /* Keep the number of lines in a sentence on two lines, and add "..." to the end of line. */
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-}
-
 /* item */
 .item .panel-body {
     height: 70px;
@@ -111,7 +107,7 @@ p.item-title {
     /* Keep the number of lines in a sentence on two lines, and add "..." to the end of line. */
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 4;
     overflow: hidden;
 }
 /* item */
@@ -228,9 +224,9 @@ a.cp_btnmen:hover {
 background: #87CEEB;
 color: #fff;
 }
-p{
-    font-family: 'Caveat', cursive;
-}
+/*p{*/
+/*    font-family: 'Caveat', cursive;*/
+/*}*/
 
 /*   親密度ボタン   */
 
@@ -267,12 +263,7 @@ p{
 
 /* Simple Reset */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-/* body */
-body {
-  background: #F0FFFF;
-  color: #5e5e5e;
-  font: 1.5em 'Open Sans', sans-serif;
-}
+
 /* Form Layout */
 .form-wrapper {
   background: #fafafa;
@@ -339,4 +330,32 @@ form {
 }
 .form-footer a:hover {
   border-bottom: 1px dotted #8c8c8c;
+}
+
+/*welcomeページの分割*/
+
+main {
+  display: flex;
+}
+
+.about{
+    margin-top: 500px;
+}
+ 
+main div.division {
+  width: calc(50% - 10px);
+  margin: 20px;
+}
+
+main .header{
+    height: 800px;
+}
+
+.main .division h1 {
+    margin: 0 0 20px 0;
+    color: #98fb98;
+    font-weight: bold;
+    font-family: "Mplus 1p",'Helvetica Neue','Helvetica','Arial', "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    -webkit-text-stroke: 1px #fff;
+    letter-spacing: 0.15em;
 }

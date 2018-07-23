@@ -9,7 +9,7 @@
         @foreach ($items as $key => $item)
             <div class="item">
                 <div class="col-md-3 col-sm-4 col-xs-12">
-                    <div class="panel panel-default">
+                    <div class="panel panel-warning">
                         <div class="panel-heading text-center">
                             <img src="{{ $item->image_url }}" alt="" class="">
                         </div>
