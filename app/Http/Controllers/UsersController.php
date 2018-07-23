@@ -270,6 +270,7 @@ class UsersController extends Controller
                 $item->code = $rws_item['Item']['itemCode'];
                 $item->name = $rws_item['Item']['itemName'];
                 $item->url = $rws_item['Item']['itemUrl'];
+                $item->apiprice = $rws_item['Item']['itemPrice'];
                 $item->image_url = str_replace('?_ex=128x128', '', $rws_item['Item']['mediumImageUrls'][0]['imageUrl']);
                 $items[] = $item;
             }

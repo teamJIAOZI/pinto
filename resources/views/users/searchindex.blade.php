@@ -14,7 +14,7 @@
                             <img src="{{ $item->image_url }}" alt="" class="">
                         </div>
                         <div class="panel-body1">
-                          
+                            価格:￥{{$item->apiprice}}<br>
                             <p class="item-title"><a href="{{ $item->url }}" target="_blank">{{ $item->name }}</a></p>
                             
                         </div>
