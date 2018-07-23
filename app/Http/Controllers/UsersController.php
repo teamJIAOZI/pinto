@@ -196,7 +196,7 @@ class UsersController extends Controller
     
         // $items = \DB::table('items')->select('id','items','story','price', 'item_brand','img_path')->where('gender', '1')->where('kind', $value)->inRandomOrder($number)->get();
         
-        $items = \DB::table('items')->select('id', 'items','story','price', 'item_brand','img_path')->where('gender', '1')->get();
+        $items = \DB::table('items')->select('id', 'items','story','price', 'item_brand','img_path')->where('gender', '1')->where('kind', $value)->get();
         
         srand($number);
         for($i=0;$i<count($items);$i++) {
@@ -233,7 +233,7 @@ class UsersController extends Controller
         
     
         // $items = \DB::table('items')->select('id','items','story','price', 'item_brand','img_path')->where('gender', '2')->where('kind', $value)->inRandomOrder($number)->get();
-        $items = \DB::table('items')->select('id', 'items','story','price', 'item_brand','img_path')->where('gender', '1')->get();
+        $items = \DB::table('items')->select('id', 'items','story','price', 'item_brand','img_path')->where('gender', '2')->where('kind', $value)->get();
         
         srand($number);
         for($i=0;$i<count($items);$i++) {

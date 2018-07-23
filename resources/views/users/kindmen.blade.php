@@ -19,7 +19,7 @@
                                   
                                   
                             @if (Auth::check())
-                                  @include('user_favorite.menfavorite_button', ['user' => $user])
+                                 @include('user_favorite.favorite_button', ['user' => $user])
                             @endif
                             
                                </li>

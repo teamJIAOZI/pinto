@@ -8,16 +8,16 @@ class UserFavoriteController extends Controller
 {
     public function store(Request $request, $id)
     {
-        
         $previous = parse_url(url()->previous());
         
         \Auth::user()->like($id);
+        return "ok";
+        /*
         if ($request->pagenumber==null) {
             return redirect($previous['path'].'?page=1');
         }else{
-        return redirect()->back();
-            
-        }
+            return redirect()->back();
+        }*/
         
     }
 
@@ -25,12 +25,8 @@ class UserFavoriteController extends Controller
     {
         $previous = parse_url(url()->previous());
         \Auth::user()->unlike($id);
-        if ($request->pagenumber==null) {
-            return redirect($previous['path'].'?page=1');
-        }else{
-        return redirect()->back();
-        }
-        
+        return "ok";
+
     }
     
     public function favoritestore(Request $request, $id)

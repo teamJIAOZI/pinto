@@ -3,14 +3,14 @@
      {!! Form::open(['route' => ['user.favoriteunlike', $item->id], 'method' => 'delete']) !!}
      <input type="hidden" name="pagenumber" value="{{Request::get('page')}}">
      <input type="hidden" name="pageurl" value="{{Request::path()}}">
-     {!! Form::submit('unfavorite', ['class' => "btn btn-success btn-xs"]) !!}
+     {!! Form::submit('いらない', ['class' => "btn btn-success btn-xs"]) !!}
      {!! Form::close() !!}
     @else
      {!! Form::open(['route' => ['user.favoritelike', $item->id]]) !!}
      <input type="hidden" name="pagenumber" value="{{Request::get('page')}}">
      <input type="hidden" name="pageurl" value="{{Request::path()}}">
      
-     {!! Form::submit('favorite', ['class' => "btn btn-default btn-xs "]) !!}
+     {!! Form::submit('お気に入り', ['class' => "btn btn-default btn-xs "]) !!}
      {!! Form::close() !!}
     @endif
 @endif

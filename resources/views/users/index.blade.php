@@ -31,23 +31,17 @@
         @endforeach
 </div>
 <script>
+
+
 window.onload = function() {
-var huga = 0;
+    
 var hoge = setInterval(function() {
-    console.log(huga);
-    huga++;
-    //終了条件
-    if (huga == 10) {
+//$("html,body").animate({scrollTop:$('#xx_{{$item->id}}').offset().top});
     clearInterval(hoge);
   console.log('onload 1');
-  var offset = $('#xx_148').offset() || {top: 0, left: 0};
-//  console.log(offset);
-$(window).scrollTop(offset.top);
-
     console.log("終わり");
 
-    }
-}, 1000);
+}, 500);
 
 /*
     var element = document.getElementById('xx_148');
