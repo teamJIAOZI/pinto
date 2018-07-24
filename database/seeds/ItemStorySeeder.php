@@ -2556,16 +2556,6 @@ class ItemStorySeeder extends Seeder
 'img_path'=>'https://thumbnail.image.rakuten.co.jp/@0_mall/ymsk/cabinet/aroma/9627.jpg'
 ],
 [
-'id' =>292,
-'gender' => 2,
-'items' => '美顔ローラー',
-'story' => '普段お礼を言うのも恥ずかしい姉へのプレゼントに！お値段も手頃です。',
-'price' => 4,000,
-'kind' => 5,
-'item_brand' => '美顔ローラー',
-'img_path'=>'https://image.rakuten.co.jp/rennkou-syouji/cabinet/03338770/03352680/03352713/imgrc0061688485.jpg'
-],
-[
 'id' =>293,
 'gender' => 1,
 'items' => '薄い財布',
