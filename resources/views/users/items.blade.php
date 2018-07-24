@@ -13,7 +13,7 @@
                                        </div>
                                   </div>
                                   
-                                  <a href="{{ route('users.searchindex', ['keyword' => $item->item_brand,'keywords' => $item->items] ) }}" class="cp_btnwomen">{{ $item->items }}</br>相場:￥{{ $item->price }}</a>
+                                  <a href="{{ route('users.searchindex', ['keyword' => $item->item_brand,'keywords' => $item->items] ) }}" class="cp_btnitem">{{ $item->items }}</br>相場:￥{{ $item->price }}</a>
                                   
                                   
                             @if (Auth::check())

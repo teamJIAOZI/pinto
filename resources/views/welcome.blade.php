@@ -89,21 +89,22 @@
         
         </font>
         
-    @endif
+        @endif
     
     @section('about')
     <main>
-        <div class="header">
-        </div>
 
         <div class="division">
             <h1>Pintoとは</h1>
             <p>新たなコミュニケーション。</p>
-          </div>
-          <div class="division">
-            <img src="images/coffee.jpg" alt="">
-            <p></p>
-      </div>
+        </div>
+          
+        <div class="division">
+            <div class="movingimage">
+                <img src="images/coffee.jpg" alt="">
+                <p></p>
+            </div>
+        </div>
      
     </main>
 
