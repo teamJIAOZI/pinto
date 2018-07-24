@@ -47,8 +47,10 @@ function a{{$item->id}}(param) {
 
 ?>
 <!--二つのボタン-->
-<div>
+<div class="button_wrapper">
      <button id="btn_{{$item->id}}_a" onclick="a{{$item->id}}('unlike')" style='{{$visibleA}}'>いらない</button>
+</div>
+<div class="button_wrapper">
      <button id="btn_{{$item->id}}_b" onclick="a{{$item->id}}('like')" style='{{$visibleB}}'>お気に入り</button>
 </div>
 @endif

@@ -36,7 +36,7 @@
                                           <div class="caption">{{ $item->story }}</div>
                                        </div>
                                   </div>
-                                  <a href="{{ route('users.searchindex', ['keyword' => $item->item_brand,'keywords' => $item->items] ) }}" class="cp_btnwomen">{{ $key+1 }}位: {{ $item->count}} Favorite </br>
+                                  <a href="{{ route('users.searchindex', ['keyword' => $item->item_brand,'keywords' => $item->items] ) }}" class="cp_btnitem">{{ $key+1 }}位: {{ $item->count}} Favorite </br>
                                   {{ $item->items }}</br>相場:￥{{ $item->price }}</a>
                                   
                                   @include('user_favorite.favorite_button', ['user' => $user, 'item' => $item])
@@ -64,7 +64,7 @@
                                           <div class="caption">{{ $itemgirl->story }}</div>
                                        </div>
                                   </div>
-                                  <a href="{{ route('users.searchindex', ['keyword' => $itemgirl->item_brand,'keywords' => $itemgirl->items] ) }}" class="cp_btnwomen">{{ $key+1 }}位: {{ $itemgirl->count}} Favorite </br>
+                                  <a href="{{ route('users.searchindex', ['keyword' => $itemgirl->item_brand,'keywords' => $itemgirl->items] ) }}" class="cp_btnitem">{{ $key+1 }}位: {{ $itemgirl->count}} Favorite </br>
                                   {{ $itemgirl->items }}</br>相場:￥{{ $itemgirl->price }}</a>
                                   
                                   @include('user_favorite.favorite_button', ['user' => $user, 'item' => $itemgirl])
@@ -95,12 +95,12 @@
         <div class="division">
         <div class="about">
             <h725>Pintoとは</h725><br>
-            <p525 align="center">Pintoでは、プレゼントをあげる相手との関係性から<br>
+            <p525 align="center">プレゼントをあげる相手との関係性から<br>
                 ぴったりなものを提案します。<br>
                 家族に、恋人に、友人に。<br>
                 いつも伝えられない感謝の気持ちを伝えてみませんか。<br><br>
                 
-                Pintoでは、同期へのインタビューによる約300のデータ、<br>
+                同期へのインタビューによる約300のデータ、<br>
                 生の声を使用しています。</p525>
         </div>
         </div>

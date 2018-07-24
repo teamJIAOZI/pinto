@@ -192,7 +192,11 @@ class UsersController extends Controller
        
        
         $value = $request->answers; 
-       
+        if($value==null){
+            return redirect()->back();
+            
+        }else{
+        
     
         // $items = \DB::table('items')->select('id','items','story','price', 'item_brand','img_path')->where('gender', '1')->where('kind', $value)->inRandomOrder($number)->get();
         
@@ -211,7 +215,7 @@ class UsersController extends Controller
             'items' => $items, 
             
             ]);
-       
+        }
             
             
     }
@@ -230,7 +234,10 @@ class UsersController extends Controller
         }
         
         $value = $request->answers;
-        
+        if($value==null){
+            return redirect()->back();
+            
+        }else{
     
         // $items = \DB::table('items')->select('id','items','story','price', 'item_brand','img_path')->where('gender', '2')->where('kind', $value)->inRandomOrder($number)->get();
         $items = \DB::table('items')->select('id', 'items','story','price', 'item_brand','img_path')->where('gender', '2')->where('kind', $value)->get();
@@ -246,9 +253,9 @@ class UsersController extends Controller
         return view('users.kindwomenindex', [
             'items' => $items,
             ]);
-    
+        }
     }
-    
+    // 楽天APIでの商品詳細ページ
      public function searchindex()
     {
         $keyword = request()->keyword;

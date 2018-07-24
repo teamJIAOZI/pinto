@@ -386,43 +386,6 @@ itemsearch div.animal {
 
 
 /*親密度ボタン*/
-/*friendbutton{*/
-/*    margin-top: 50px;*/
-/*}*/
-
-/*.radio02-input{*/
-/*  display: none;*/
-/*}*/
-/*.radio02-input + label{*/
-/*  padding-left: 20px;*/
-/*  position:relative;*/
-/*  margin-right: 20px;*/
-/*}*/
-/*.radio02-input + label::before{*/
-/*  content: "";*/
-/*  display: block;*/
-/*  position: absolute;*/
-/*  top: 0;*/
-/*  left: 0;*/
-/*  width: 15px;*/
-/*  height: 15px;*/
-/*  border: 1px solid #999;*/
-/*  border-radius: 50%;*/
-/*}*/
-/*.radio02-input:checked + label{*/
-/*  color: #FF1493;*/
-/*}*/
-/*.radio02-input:checked + label::after{*/
-/*  content: "";*/
-/*  display: block;*/
-/*  position: absolute;*/
-/*  top: 3px;*/
-/*  left: 3px;*/
-/*  width: 11px;*/
-/*  height: 11px;*/
-/*  background: #FFA500;*/
-/*  border-radius: 70%;*/
-/*}*/
 
 .radio02{
     text-align: center;
@@ -529,19 +492,19 @@ itemsearch div.animal {
 	position: absolute;
 	top: 0px;
 	left: 15%;
-    animation-delay:2.5s;
+    animation-delay:10s;
 }
 .album .img3 {
 	position: absolute;
 	top: 0px;
 	left: 15%;
-	animation-delay:5s;
+	animation-delay:20s;
 }
 .album .img4 {
 	position: absolute;
 	top: 0px;
 	left: 15%;
-	animation-delay:7.5s;
+	animation-delay:30s;
 }
 
 @keyframes album {
@@ -578,4 +541,12 @@ itemsearch div.animal {
 }
 #survey-ttl{
     text-align: center;
+}
+
+/*お気に入りボタン*/
+.button_wrapper{
+    text-align: center;
+    background: #f16272;
+    border: none;
+    color: #fff;
 }
