@@ -26,11 +26,12 @@
         
         @yield('cover')
 
+        <div class="container">
             @include('commons.error_messages')
 
             @yield('content')
             @yield('about')
-
+        </div>
         @include('commons.footer')
     </body>
 </html>

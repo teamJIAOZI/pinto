@@ -12,18 +12,18 @@ footer {
 }
 /* navbar */
 .navbar {
-    background-color: #CCFFFF;
+    background-color: #E7D5E8;
     position: fixed;
     width: 100%;
     height: 50px;
     z-index: 9999;
+    font-size: 20px;
 }
 
 .navbar-header img {
-    margin-top: 10px;
-    height: 100px;
+    height: 44px;
+    width: 87px;
 }
-
 
 
 font {
@@ -35,7 +35,8 @@ titlefont{
 }
 
 p1{
-    font-size: 20px;
+    font-size: 15px;
+    text-align:center;
 }
 p2{
     font-size: 30px;
@@ -62,9 +63,10 @@ p2{
     position: relative;
 }
 .cover .cover-inner .cover-contents h1 {
-    margin: 100px 0 30px 0;
-    color: #FFB6C1;
+    margin: 40px 0 30px 0;
+    color: #191970;
     font-weight: bold;
+    font-size: 50px;
     font-family: 'Pacifico', cursive;
     -webkit-text-stroke: 1px #fff;
     letter-spacing: 0.15em;
@@ -72,11 +74,27 @@ p2{
 
 .cover .cover-inner .cover-contents h2 {
     margin: 0 0 20px 0;
-    color: #FFB6C1;
+    color: #4682b4;
     font-weight: bold;
     font-family: "Mplus 1p",'Helvetica Neue','Helvetica','Arial', "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
     -webkit-text-stroke: 1px #fff;
     letter-spacing: 0.15em;
+}
+
+.cover .cover-inner .cover-contents h725 {
+    margin: 10px;
+    padding: 10px;
+    color: #191970;
+    font-weight: bold;
+    font-size: 50px;
+    font-family: 'Pacifico', cursive;
+    -webkit-text-stroke: 1px #fff;
+    letter-spacing: 0.15em;
+}
+
+p525{
+    color: #191970;
+    font-size: 20px
 }
 
 li{
@@ -97,11 +115,14 @@ main {
 
 main div.division {
   width: calc(50% - 10px);
-  margin: 180px 0 0 0;
+  margin: 200px 0 0 0;
+}
+
+.main .division .about{
+    margin: 0;
 }
 
 .main .division h1 {
-    margin: 0 0 20px 0;
     color: #98fb98;
     font-weight: bold;
     font-family: "Mplus 1p",'Helvetica Neue','Helvetica','Arial', "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
@@ -276,37 +297,6 @@ background: #008080;
 color: #fff;
 }
 
-/*   親密度ボタン   */
-
-.radiobutton input{
-	display: none;
-}
-.radiobutton label{
-	display: inline-block;
-	float: left;
-	cursor: pointer;
-	width: 80px;
-	margin: 0;
-	padding: 12px 5px;
-	border-right: 1px solid #abb2b7;
-	background: #bdc3c7;
-	color: #555e64;
-	font-size: 14px;
-	text-align: center;
-	line-height: 1;
-	transition: .2s;
-}
-.radiobutton label:first-of-type{
-	border-radius: 3px 0 0 3px;
-}
-.radiobutton label:last-of-type{
-	border-right: 0px;
-	border-radius: 0 3px 3px 0;
-}
-.radiobutton input[type="radio"]:checked + label {
-	background-color: #a1b91d;
-	color: #fff;
-}
 
 
 /* Simple Reset */
@@ -385,10 +375,126 @@ form {
 itemsearch {
   display: flex;
   flex-wrap: wrap;
-
 }
  
 itemsearch div.animal {
   width: calc(25% - 10px);
   margin: 5px;
+}
+
+
+
+
+/*親密度ボタン*/
+friendbutton{
+    margin-top: 50px;
+}
+
+.radio02-input{
+  display: none;
+}
+.radio02-input + label{
+  padding-left: 20px;
+  position:relative;
+  margin-right: 20px;
+}
+.radio02-input + label::before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #999;
+  border-radius: 50%;
+}
+.radio02-input:checked + label{
+  color: #FF1493;
+}
+.radio02-input:checked + label::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 11px;
+  height: 11px;
+  background: #FFA500;
+  border-radius: 70%;
+}
+.album {
+	margin: auto;
+	background-color: white;
+	position: relative;
+}
+
+.album img {
+    top:50px; 
+	width:70%;
+	animation-name: album;
+	-webkit-animation-name: album;
+	animation-duration: 40s;
+	-webkit-animation-duration: 40s;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	opacity: 0;
+}
+
+.album .img1 {
+	display: block;
+	margin: 0 auto;
+	left: 35%;
+}
+
+.album .img2 {
+	position: absolute;
+	top: 0px;
+	left: 15%;
+    animation-delay:2.5s;
+}
+.album .img3 {
+	position: absolute;
+	top: 0px;
+	left: 15%;
+	animation-delay:5s;
+}
+.album .img4 {
+	position: absolute;
+	top: 0px;
+	left: 15%;
+	animation-delay:7.5s;
+}
+
+@keyframes album {
+	0% {
+		opacity: 0;
+	}
+	
+	6.3% {
+		opacity: 1;
+	}
+
+	18.7% {
+		opacity: 1;
+	}
+	25% {
+		opacity: 0;
+	}
+}
+	@-webkit-keyframes album {
+	0% {
+		opacity: 0;
+	}
+	
+	6.3% {
+		opacity: 1;
+	}
+
+	18.7% {
+		opacity: 1;
+	}
+	25% {
+		opacity: 0;
+	}
 }

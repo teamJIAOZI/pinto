@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand"　"text-primary" href="/"　>pinto</a>
+                <a class="navbar-left" href="/"><img src="{{ secure_asset("images/pintologo.png") }}" alt="Pinto"></a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">

@@ -89,26 +89,43 @@
         
         </font>
         
-        @endif
-    
-    @section('about')
+        @section('about')
     <main>
 
         <div class="division">
-            <h1>Pintoとは</h1>
-            <p>新たなコミュニケーション。</p>
+        <div class="about">
+            <h725>Pintoとは</h725><br>
+            <p525 align="center">Pintoでは、プレゼントをあげる相手との関係性から<br>
+                ぴったりなものを提案します。<br>
+                家族に、恋人に、友人に。<br>
+                いつも伝えられない感謝の気持ちを伝えてみませんか。<br><br>
+                
+                Pintoでは、同期へのインタビューによる約300のデータ、<br>
+                生の声を使用しています。</p525>
+        </div>
         </div>
           
         <div class="division">
             <div class="movingimage">
-                <img src="images/coffee.jpg" alt="">
-                <p></p>
+                <div class="album">
+                    <img class="img1"src="images/whiteday.jpg" alt="1">
+                    <img class="img2" src="images/happybirthday.jpg" alt="2">
+                    <img class="img3"src="images/present.jpg" alt="3">
+                    <img class="img4"src="images/xmas.jpg" alt="4">
+                </div>
             </div>
         </div>
      
     </main>
 
     @endsection
+    
+    
+    
+    
+    @endif
+    
+
         
         
 
