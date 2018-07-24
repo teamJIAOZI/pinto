@@ -10,7 +10,7 @@
      {!! Form::open(['route' => 'users.mensearch','method' => 'get']) !!}
 
     <div class="radio02">
-      <input type="radio" name="answers" class="radio02-input" id="radio02-01" value=5 <?php if (isset($_SESSION['sex']) && $_SESSION['sex'] == "男"){ print " checked"; }?>>
+      <input type="radio" name="answers" class="radio02-input" id="radio02-01" value=5>
       <label for="radio02-01">家族</label>
       <input type="radio" name="answers" class="radio02-input" id="radio02-02" value=4>
       <label for="radio02-02">恋人</label>
@@ -31,6 +31,8 @@
     {!! Form::open(['route' => 'users.menindex','method' => 'get']) !!}
     <input class="unsearchbtn" type="submit" value="絞り込み解除">
     {!! Form::close() !!}
+    
+    <br><br><br><br>
     
     <!--アイテム一覧ページをinclude-->
     @include('users.index', ['user' => $user,'items' => $items])

@@ -12,7 +12,9 @@
             <div class="item">
                 <div class="panel panel-warning">
                         <div class="panel-heading text-center">
+                            <a href="{{ $item->url }}">
                             <img src="{{ $item->image_url }}" alt="" class="">
+                            </a>
                         </div>
                         
                         <div class="panel-body1">

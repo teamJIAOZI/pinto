@@ -386,10 +386,47 @@ itemsearch div.animal {
 
 
 /*親密度ボタン*/
-friendbutton{
-    margin-top: 50px;
-}
+/*friendbutton{*/
+/*    margin-top: 50px;*/
+/*}*/
 
+/*.radio02-input{*/
+/*  display: none;*/
+/*}*/
+/*.radio02-input + label{*/
+/*  padding-left: 20px;*/
+/*  position:relative;*/
+/*  margin-right: 20px;*/
+/*}*/
+/*.radio02-input + label::before{*/
+/*  content: "";*/
+/*  display: block;*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  width: 15px;*/
+/*  height: 15px;*/
+/*  border: 1px solid #999;*/
+/*  border-radius: 50%;*/
+/*}*/
+/*.radio02-input:checked + label{*/
+/*  color: #FF1493;*/
+/*}*/
+/*.radio02-input:checked + label::after{*/
+/*  content: "";*/
+/*  display: block;*/
+/*  position: absolute;*/
+/*  top: 3px;*/
+/*  left: 3px;*/
+/*  width: 11px;*/
+/*  height: 11px;*/
+/*  background: #FFA500;*/
+/*  border-radius: 70%;*/
+/*}*/
+
+.radio02{
+    text-align: center;
+}
 .radio02-input{
   display: none;
 }
@@ -421,8 +458,49 @@ friendbutton{
   width: 11px;
   height: 11px;
   background: #FFA500;
-  border-radius: 70%;
+  border-radius: 50%;
 }
+.searchbtn {
+    position: relative;
+    left: 40%;
+    float: left;
+    display: inline-block;
+    font-weight: bold;
+    padding: 7px 10px 10px 10px;
+    text-decoration: none;
+    color: #EEFFFF;
+    background: #FFBBFF;
+    transition: .4s;
+    border-radius: 10px;
+}
+.searchbtn>span {
+    border-bottom: solid 2px #FFF;
+}
+.searchbtn:hover {
+    color: #888888;  
+    background: #FFC7AF;
+}
+.unsearchbtn {
+    position: relative;
+    right: 40%;
+    float: right;
+    display: inline-block;
+    font-weight: bold;
+    padding: 7px 10px 10px 10px;
+    text-decoration: none;
+    color: #EEFFFF;
+    background: #9FD9F6;
+    transition: .4s;
+    border-radius: 10px;
+}
+.unsearchbtn>span {
+    border-bottom: solid 2px #FFF;
+}
+.unsearchbtn:hover {
+    color: #888888;  
+    background: #FFC7AF;
+}
+
 .album {
 	margin: auto;
 	background-color: white;
@@ -430,7 +508,7 @@ friendbutton{
 }
 
 .album img {
-    top:50px; 
+    top:0px; 
 	width:70%;
 	animation-name: album;
 	-webkit-animation-name: album;
@@ -497,4 +575,7 @@ friendbutton{
 	25% {
 		opacity: 0;
 	}
+}
+#survey-ttl{
+    text-align: center;
 }
