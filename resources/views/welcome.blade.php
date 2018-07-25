@@ -60,7 +60,8 @@
                     </div>
 
                         <div class="panel-body1">
-                                  <a href="{{ route('users.searchindex', ['keyword' => $item->item_brand,'keywords' => $item->items] ) }}" class="cp_btnitem">{{ $key+1 }}位: {{ $item->count}} Favorite </br>
+                            <p3>{{ $key+1 }}位: {{ $item->count}} Favorite </p3>
+                                  <a href="{{ route('users.searchindex', ['keyword' => $item->item_brand,'keywords' => $item->items] ) }}" class="cp_btnitem">
                                   {{ $item->items }}</br>相場:￥{{ $item->price }}</a>
                                   @include('user_favorite.favorite_button', ['user' => $user, 'item' => $item])
                        </div></font>

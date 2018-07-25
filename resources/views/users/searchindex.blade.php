@@ -5,6 +5,8 @@
 @if ($items)
         <br>
         <h1><?php print $keywords ?>の商品一覧</h1>
+        <div align="right"><a href="javascript:history.back()" class="square_btn">前のページに戻る</a>
+        </div>
         
         <itemsearch>
         @foreach ($items as $key => $item)

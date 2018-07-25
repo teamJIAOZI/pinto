@@ -33,7 +33,10 @@
     <input class="unsearchbtn" type="submit" value="絞り込み解除">
     {!! Form::close() !!}
     
-    <br><br><br><br>
+        <div align="right"><a href="javascript:history.back()" class="square_btn">前のページに戻る</a>
+        </div>  
+    
+    <br><br>
     
     <!--アイテム一覧ページをinclude-->
     @include('users.kindwomen', ['user' => $user,'items' => $items])

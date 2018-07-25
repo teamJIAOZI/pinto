@@ -38,7 +38,13 @@ titlefont{
 h3{
     background: #FFFF66;
     font-family: "Mplus 1p",'Helvetica Neue','Helvetica','Arial', "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
 
+
+h1 {
+    color: #808080;
+    font-weight: normal;
+    font-family: "Mplus 1p",'Helvetica Neue','Helvetica','Arial', "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 }
 
 h5{
@@ -425,6 +431,22 @@ form {
 .button:hover {
   background: #ee3e52;
 }
+
+/*戻るボタン*/
+
+.square_btn{
+    display: inline-block;
+    font-family: "Mplus 1p",'Helvetica Neue','Helvetica','Arial', "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    font-weight: normal;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #666699;/*ボタン色*/
+    color: #FFF;
+    border-bottom: solid 4px #627295;
+    border-radius: 3px;
+}
+
+
 .form-footer {
   font-size: 1em;
   padding: 2em 0;

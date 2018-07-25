@@ -30,8 +30,11 @@
     {!! Form::open(['route' => 'users.menindex','method' => 'get']) !!}
     <input class="unsearchbtn" type="submit" value="絞り込み解除">
     {!! Form::close() !!}
+    
+        <div align="right"><a href="javascript:history.back()" class="square_btn">前のページに戻る</a>
+        </div>    
         
-    <br><br><br><br>
+    <br><br>
     
     <!--アイテム一覧ページをinclude-->
     @include('users.index', ['user' => $user,'items' => $items])
