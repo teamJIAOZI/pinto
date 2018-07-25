@@ -62,7 +62,6 @@
                         <div class="panel-body1">
                                   <a href="{{ route('users.searchindex', ['keyword' => $item->item_brand,'keywords' => $item->items] ) }}" class="cp_btnitem">{{ $key+1 }}位: {{ $item->count}} Favorite </br>
                                   {{ $item->items }}</br>相場:￥{{ $item->price }}</a>
-                                  
                                   @include('user_favorite.favorite_button', ['user' => $user, 'item' => $item])
                        </div></font>
                     </div>
@@ -79,7 +78,7 @@
 <itemsearch>
         @foreach ($itemgirls as $key => $itemgirl)
         <div class="animal">
-        <div class = "item" id="xx_{{$item->id}}">
+        <div class = "item" id="xx_{{$itemgirl->id}}">
             <div class="panel panel-warning">
                 <div id = "nav">
                     <div class="sample1">
@@ -98,7 +97,7 @@
                                   <a href="{{ route('users.searchindex', ['keyword' => $itemgirl->item_brand,'keywords' => $itemgirl->items] ) }}" class="cp_btnitem">
                                   {{ $itemgirl->items }}</br>相場:￥{{ $itemgirl->price }}</a>
                                   
-                                  @include('user_favorite.favorite_button', ['user' => $user, 'item' => $item])
+                                  @include('user_favorite.favorite_button', ['user' => $user, 'item' => $itemgirl])
                        </div></font>
                     </div>
             </div>
