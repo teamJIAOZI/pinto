@@ -21,6 +21,8 @@
   <input type="radio" name="answers" class="radio02-input" id="radio02-05" value=1 <?php if ($_GET['answers'] == 1){ print " checked"; }?>>
   <label for="radio02-05">よっ友</label>
 </div>
+
+<br>
     
     <div>    
     <input class="searchbtn" type="submit" value="絞り込み">

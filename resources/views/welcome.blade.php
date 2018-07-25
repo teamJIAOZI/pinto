@@ -9,87 +9,111 @@
                 
 @endsection
 
-@section('content')
-     @if (Auth::check())
-        <font><h2><?php $user = Auth::user(); ?>
-        {{ $user->name }}さん</h2></br></br>
+@section('buttons')
+    @if (Auth::check())
+        <h4><?php $user = Auth::user(); ?>
+        {{ $user->name }}さん</h4></br></br>
         
-        <p2>誰にあげますか</br></p2></font>
+        <h5>誰にあげますか？</h5>
         
         <a href="{{ route('users.loginwomenindex',['id' => $user->id] ) }}" class="cp_btnwomen">女性にあげる</a>
         <a href="{{ route('users.loginmenindex',['id' => $user->id] ) }}" class="cp_btnmen">男性にあげる</a>
        
-        </br>
-        
-        <titlefont><h3>男性人気ランキング</h3></titlefont>
-        
-        <div class="row">
-        @foreach ($items as $key => $item)
-        <div class = "item">
-                <div class="col-md-3 col-sm-4 col-xs-12">
-                       <div id = "nav"><font>
-                           <ul>
-                               <li>
-                                  <div class="sample1">
-                                      <img src="{{ $item->img_path }}" alt="story">
-                                       <div class="mask">
-                                          <div class="caption">{{ $item->story }}</div>
-                                       </div>
-                                  </div>
-                                  <a href="{{ route('users.searchindex', ['keyword' => $item->item_brand,'keywords' => $item->items] ) }}" class="cp_btnitem">{{ $key+1 }}位: {{ $item->count}} Favorite </br>
-                                  {{ $item->items }}</br>相場:￥{{ $item->price }}</a>
-                                  
-                                  @include('user_favorite.favorite_button', ['user' => $user, 'item' => $item])
-
-                               </li>
-                           </ul>
-                       </div></font>
-                 </div>
-                 </div>
-        @endforeach
-</div>
-        
-
-        <titlefont><h3>女性人気ランキング</h3></titlefont>
-        <div class="row">
-        @foreach ($itemgirls as $key => $itemgirl)
-        <div class = "item">
-                <div class="col-md-3 col-sm-4 col-xs-12">
-                       <div id = "nav"><font>
-                           <ul>
-                               <li>
-                                  <div class="sample1">
-                                     <img src="{{ $itemgirl->img_path }}" alt="story"> 
-                                       <div class="mask">
-                                          <div class="caption">{{ $itemgirl->story }}</div>
-                                       </div>
-                                  </div>
-                                  <a href="{{ route('users.searchindex', ['keyword' => $itemgirl->item_brand,'keywords' => $itemgirl->items] ) }}" class="cp_btnitem">{{ $key+1 }}位: {{ $itemgirl->count}} Favorite </br>
-                                  {{ $itemgirl->items }}</br>相場:￥{{ $itemgirl->price }}</a>
-                                  
-                                  @include('user_favorite.favorite_button', ['user' => $user, 'item' => $itemgirl])
-
-                               </li>
-                           </ul>
-                       </div></font>
-                 </div>
-                 </div>
-        @endforeach
-</div>
-        
-        
         
     @else
 
-        <font></br>誰にあげますか</br>
+        <font></br><h5>誰にあげますか？</h5></br>
         
         <a href="{{ route('users.womenindex') }}" class="cp_btnwomen">女性にあげる</a>
-        
         <a href="{{ route('users.menindex') }}" class="cp_btnmen">男性にあげる</a>
         
         </font>
         
-        @section('about')
+    @endif
+                
+@endsection
+
+
+
+@section('content')
+@if (Auth::check())
+
+<rankingpart>
+        <titlefont><h3>男性人気ランキング</h3></titlefont>
+        
+<div class="row">
+    <itemsearch> 
+        @foreach ($items as $key => $item)
+        <div class="animal">
+        <div class = "item" id="xx_{{$item->id}}">
+            <div class="panel panel-warning">
+                <div id = "nav">
+                    <div class="sample1">
+                        <div class="panel-heading text-center">
+                            <a href="{{ route('users.searchindex', ['keyword' => $item->item_brand,'keywords' => $item->items] ) }}" >
+                                       <img src="{{ $item->img_path }}" alt="">
+                                       <div class="mask">
+                                          <div class="caption">{{ $item->story }}</div>
+                                       </div>
+                            </a>
+                        </div>
+                    </div>
+
+                        <div class="panel-body1">
+                                  <a href="{{ route('users.searchindex', ['keyword' => $item->item_brand,'keywords' => $item->items] ) }}" class="cp_btnitem">{{ $key+1 }}位: {{ $item->count}} Favorite </br>
+                                  {{ $item->items }}</br>相場:￥{{ $item->price }}</a>
+                                  
+                                  @include('user_favorite.favorite_button', ['user' => $user, 'item' => $item])
+                       </div></font>
+                    </div>
+            </div>
+            </div>
+        </div>
+        @endforeach
+    </itemsearch> 
+</div>
+        
+
+        <titlefont><h3>女性人気ランキング</h3></titlefont>
+<div class="row">
+<itemsearch>
+        @foreach ($itemgirls as $key => $itemgirl)
+        <div class="animal">
+        <div class = "item" id="xx_{{$item->id}}">
+            <div class="panel panel-warning">
+                <div id = "nav">
+                    <div class="sample1">
+                        <div class="panel-heading text-center">
+                            <a href="{{ route('users.searchindex', ['keyword' => $itemgirl->item_brand,'keywords' => $itemgirl->items] ) }}" >
+                                       <img src="{{ $itemgirl->img_path }}" alt="">
+                                       <div class="mask">
+                                          <div class="caption">{{ $itemgirl->story }}</div>
+                                       </div>
+                            </a>
+                        </div>
+                    </div>
+
+                        <div class="panel-body1">
+                            <p3>{{ $key+1 }}位: {{ $itemgirl->count}} Favorite </p3>
+                                  <a href="{{ route('users.searchindex', ['keyword' => $itemgirl->item_brand,'keywords' => $itemgirl->items] ) }}" class="cp_btnitem">
+                                  {{ $itemgirl->items }}</br>相場:￥{{ $itemgirl->price }}</a>
+                                  
+                                  @include('user_favorite.favorite_button', ['user' => $user, 'item' => $item])
+                       </div></font>
+                    </div>
+            </div>
+            </div>
+        </div>         
+                 
+                 
+        @endforeach
+</itemsearch>
+</div>
+
+</rankingpart>
+@else
+    
+@section('about')
     <main>
 
         <div class="division">
@@ -118,16 +142,8 @@
      
     </main>
 
-    @endsection
-    
-    
-    
-    
-    @endif
-    
+@endsection
 
-        
-        
-
+@endif
 
 @endsection

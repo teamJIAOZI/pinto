@@ -38,19 +38,19 @@ function a{{$item->id}}(param) {
 @if (Auth::id() == $user->id)
 <?php
     if (Auth::user()->is_liking($item->id)) {
-     $visibleA = "display:block";
+     $visibleA = "display:inline-block";
      $visibleB = "display:none";
    } else {
      $visibleA = "display:none";
-     $visibleB = "display:block";
+     $visibleB = "display:inline-block";
    }    
 
 ?>
 <!--二つのボタン-->
 <div class="button_wrapper">
-     <button id="btn_{{$item->id}}_a" onclick="a{{$item->id}}('unlike')" style='{{$visibleA}}'>いらない</button>
+     <button id="btn_{{$item->id}}_a" class="favoritebutton2" onclick="a{{$item->id}}('unlike')" style='{{$visibleA}}'>いらない</button>
 </div>
 <div class="button_wrapper">
-     <button id="btn_{{$item->id}}_b" onclick="a{{$item->id}}('like')" style='{{$visibleB}}'>お気に入り</button>
+     <button id="btn_{{$item->id}}_b" class="favoritebutton" onclick="a{{$item->id}}('like')" style='{{$visibleB}}'>お気に入り</button>
 </div>
 @endif

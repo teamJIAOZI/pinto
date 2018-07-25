@@ -17,7 +17,7 @@ use Illuminate\Http\Request;
 Route::get('/', function (Request $id) {
     if(Auth::check()){
         $user = User::find($id);
-        $itemboys = \DB::table('favorites')->join('items', 'favorites.favorite_id', '=', 'items.id')->select('items.*', \DB::raw('COUNT(*) as count'))->where('gender', 1)->groupBy('items.id', 'items.gender', 'items.items', 'items.story','items.created_at', 'items.updated_at','items.price','items.kind','items.item_brand','items.img_path')->orderBy('count', 'DESC')->take(5)->get();
+        $itemboys = \DB::table('favorites')->join('items', 'favorites.favorite_id', '=', 'items.id')->select('items.*', \DB::raw('COUNT(*) as count'))->where('gender', 1)->groupBy('items.id', 'items.gender', 'items.items', 'items.story','items.created_at', 'items.updated_at','items.price','items.kind','items.item_brand','items.img_path')->orderBy('count', 'DESC')->take(4)->get();
         // $itemboys = [];
         
         // foreach($boykeywords as $keyword){
@@ -57,7 +57,7 @@ Route::get('/', function (Request $id) {
         // ここまで男
         
         // ここから女
-        $itemgirls = \DB::table('favorites')->join('items', 'favorites.favorite_id', '=', 'items.id')->select('items.*', \DB::raw('COUNT(*) as count'))->where('gender', 2)->groupBy('items.id', 'items.gender', 'items.items', 'items.story','items.created_at', 'items.updated_at','items.price','items.kind','items.item_brand','items.img_path')->orderBy('count', 'DESC')->take(5)->get();
+        $itemgirls = \DB::table('favorites')->join('items', 'favorites.favorite_id', '=', 'items.id')->select('items.*', \DB::raw('COUNT(*) as count'))->where('gender', 2)->groupBy('items.id', 'items.gender', 'items.items', 'items.story','items.created_at', 'items.updated_at','items.price','items.kind','items.item_brand','items.img_path')->orderBy('count', 'DESC')->take(4)->get();
         // $itemgirls = [];
         
         // foreach($girlkeywords as $keyword){

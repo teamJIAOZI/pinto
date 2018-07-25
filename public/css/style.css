@@ -32,6 +32,20 @@ font {
 
 titlefont{
     font-family: "Rounded Mplus 1c";
+    background: #FFF;
+}
+
+h3{
+    background: #FFFF66;
+    font-family: "Mplus 1p",'Helvetica Neue','Helvetica','Arial', "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+
+}
+
+h5{
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    font-family: "Mplus 1p",'Helvetica Neue','Helvetica','Arial', "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 }
 
 p1{
@@ -42,12 +56,21 @@ p2{
     font-size: 30px;
 }
 
+p3{
+    font-family: "Mplus 1p",'Helvetica Neue','Helvetica','Arial', "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    color:#008080;
+    font-weight: bold;
+}
+
 /* cover */
 .cover {
     margin-top: 0px;
     margin-bottom: 20px;
     width: 100%;
-    height: 600px;
+    height: 440px;
     background: url("/images/Pintotest.png") center center no-repeat;
     background-size: cover;
 }
@@ -63,21 +86,55 @@ p2{
     position: relative;
 }
 .cover .cover-inner .cover-contents h1 {
-    margin: 40px 0 30px 0;
+    margin: 45px 0 0 0;
+    padding-bottom: 15px;
     color: #191970;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 60px;
     font-family: 'Pacifico', cursive;
+    -webkit-text-stroke: 0.25px #fff;
+    letter-spacing: 0.15em;
+}
+
+
+
+/*.type-shine {*/
+/*  font-size: 60px;*/
+/*  position: relative;*/
+/*  overflow: hidden;*/
+/*}*/
+/*.type-shine:before {*/
+/*  -webkit-animation: shine .6s ease 3s;*/
+/*  content:"";*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: -250px;*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  transform: rotate3d(0,0,1,-45deg) translate3d(0,-120%,0);*/
+/*}*/
+/*@-webkit-keyframes shine {*/
+/*  0% {transform: rotate3d(0,0,1,-45deg) translate3d(0,-120%,0);background: rgba(255,255,255,0.5);}*/
+/*  100% {transform: rotate3d(0,0,1,-25deg) translate3d(0,150%,0);background: rgba(255,255,255,0.5);}*/
+/*}*/
+
+.cover .cover-inner .cover-contents h2 {
+    margin: 0 0 20px 0;
+    color: #191970;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: "Mplus 1p",'Helvetica Neue','Helvetica','Arial', "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
     -webkit-text-stroke: 1px #fff;
     letter-spacing: 0.15em;
 }
 
-.cover .cover-inner .cover-contents h2 {
-    margin: 0 0 20px 0;
-    color: #4682b4;
+.cover .cover-inner .cover-contents h4 {
+    margin: 10px 0 5px 0;
+    color: #660000;
+    font-size: 25px;
     font-weight: bold;
     font-family: "Mplus 1p",'Helvetica Neue','Helvetica','Arial', "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
-    -webkit-text-stroke: 1px #fff;
+    -webkit-text-stroke: 0.5px #DDDDDD;
     letter-spacing: 0.15em;
 }
 
@@ -111,15 +168,16 @@ li{
 
 main {
   display: flex;
+  margin-top: 50px;
 }
 
 main div.division {
   width: calc(50% - 10px);
-  margin: 200px 0 0 0;
+  margin: 30px 0 0 0;
 }
 
 .main .division .about{
-    margin: 0;
+    margin: 20;
 }
 
 .main .division h1 {
@@ -218,7 +276,6 @@ img{
     max-height:100%;
 }
 
-
 .sample1 {
         position:relative;        /* 相対位置指定　影の枠 */
 }
@@ -245,9 +302,12 @@ img{
 
 a.cp_btnwomen {
 display: inline-block;
-width: 160px;
-padding: 0.8em;
-margin: 20px;
+font-size: 20px;
+font-family: "Mplus 1p",'Helvetica Neue','Helvetica','Arial', "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+width: 180px;
+padding: 0.5em;
+margin: 10px;
+margin-right: 30px;
 text-align: center;
 text-decoration: none;
 background-color: rgba(255,255,255,0.8);
@@ -256,16 +316,21 @@ border: 2px solid #ffb6c1;
 border-radius: 3px;
 transition: .4s;
 }
+
 a.cp_btnwomen:hover {
 background: #ffb6c1;
 color: #fff;
+transform: scale(1.08)
 }
 
 a.cp_btnmen {
 display: inline-block;
-width: 160px;
-padding: 0.8em;
-margin: 20px;
+font-size: 20px;
+font-family: "Mplus 1p",'Helvetica Neue','Helvetica','Arial', "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+width: 180px;
+padding: 0.5em;
+margin: 30px;
+margin-left: 10px;
 text-align: center;
 text-decoration: none;
 background-color: rgba(255,255,255,0.8);
@@ -277,16 +342,17 @@ transition: .4s;
 a.cp_btnmen:hover {
 background: #87CEEB;
 color: #fff;
+transform: scale(1.08)
 }
 
 a.cp_btnitem {
 display: inline-block;
-width: 220px;
+width: 250px;
 padding: 0.8em;
-margin: 20px;
+margin: 10px;
 text-align: center;
 text-decoration: none;
-background-color: rgba(255,255,255,0.8);
+background-color: #F0F8FF;
 color: #008080;
 border: 2px solid #008080;
 border-radius: 3px;
@@ -385,10 +451,9 @@ itemsearch div.animal {
 
 
 
-/*親密度ボタン*/
-
 .radio02{
     text-align: center;
+    font-family: "Rounded Mplus 1c"
 }
 .radio02-input{
   display: none;
@@ -430,8 +495,8 @@ itemsearch div.animal {
     display: inline-block;
     font-weight: bold;
     padding: 7px 10px 10px 10px;
-    text-decoration: none;
-    color: #EEFFFF;
+    font-family: "Rounded Mplus 1c";
+    color: gray;
     background: #FFBBFF;
     transition: .4s;
     border-radius: 10px;
@@ -441,7 +506,7 @@ itemsearch div.animal {
 }
 .searchbtn:hover {
     color: #888888;  
-    background: #FFC7AF;
+    background: #ffff80;
 }
 .unsearchbtn {
     position: relative;
@@ -450,9 +515,9 @@ itemsearch div.animal {
     display: inline-block;
     font-weight: bold;
     padding: 7px 10px 10px 10px;
-    text-decoration: none;
-    color: #EEFFFF;
-    background: #9FD9F6;
+    font-family: "Rounded Mplus 1c";
+    color: gray;
+    background: #bcffff;
     transition: .4s;
     border-radius: 10px;
 }
@@ -475,8 +540,8 @@ itemsearch div.animal {
 	width:70%;
 	animation-name: album;
 	-webkit-animation-name: album;
-	animation-duration: 40s;
-	-webkit-animation-duration: 40s;
+	animation-duration: 20s;
+	-webkit-animation-duration: 20s;
 	animation-iteration-count: infinite;
 	-webkit-animation-iteration-count: infinite;
 	opacity: 0;
@@ -492,19 +557,19 @@ itemsearch div.animal {
 	position: absolute;
 	top: 0px;
 	left: 15%;
-    animation-delay:10s;
+    animation-delay:5s;
 }
 .album .img3 {
 	position: absolute;
 	top: 0px;
 	left: 15%;
-	animation-delay:20s;
+	animation-delay:10s;
 }
 .album .img4 {
 	position: absolute;
 	top: 0px;
 	left: 15%;
-	animation-delay:30s;
+	animation-delay:15s;
 }
 
 @keyframes album {
@@ -541,12 +606,50 @@ itemsearch div.animal {
 }
 #survey-ttl{
     text-align: center;
+    font-family: "Rounded Mplus 1c";
+    font-size: 18px;
 }
 
 /*お気に入りボタン*/
 .button_wrapper{
     text-align: center;
-    background: #f16272;
-    border: none;
-    color: #fff;
+    font-size: 1.2em;
+    letter-spacing: 0.05em;
+    text-align: center;
+    width: 100%;    
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.button_wrapper .favoritebutton{
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    background:#339933;/*ボタン色*/
+    color: white;
+    border-bottom: solid 4px #627295;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.button_wrapper .favoritebutton2{
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    background: #336699;/*ボタン色*/
+    color: white;
+    border-bottom: solid 4px #627295;
+    border-radius: 8px;
+    font-size: 15px;
+}
+	
+
+.animal p{
+    font-size: 20px;
+}
+
+.animal p1{
+    font-size: 15px;
+}
+
+rankingpart{
+    margin-top: 0;
 }
