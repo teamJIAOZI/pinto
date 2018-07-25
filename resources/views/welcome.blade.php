@@ -12,7 +12,7 @@
 @section('buttons')
     @if (Auth::check())
         <h4><?php $user = Auth::user(); ?>
-        {{ $user->name }}さん</h4></br></br>
+        {{ $user->name }}さん</h4>
         
         <h5>誰にあげますか？</h5>
         
